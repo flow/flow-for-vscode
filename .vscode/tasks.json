@@ -23,19 +23,5 @@
 	"args": ["run", "compile", "--loglevel", "silent"],
 
 	// The babel compiler is started in watching mode
-	"isWatching": true,
-
-	// use the standard tsc in watch mode problem matcher to find compile problems in the output.
-	"problemMatcher": {
-		"owner": "babel",
-		"fileLocation": ["relative", "${workspaceRoot}"],
-		"pattern": {
-			"regexp": "^(SyntaxError): (.*?): (.*?) \\((\\d+):(\\d+)\\)$",
-			"file": 2,
-			"line": 4,
-			"column": 5,
-			"severity": 1,
-			"message": 3
-		}
-	}
+	"isWatching": true
 }
