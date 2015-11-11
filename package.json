@@ -47,6 +47,13 @@
 					"flow"
 				]
 			}
+		},{
+			"type": "node",
+			"enableBreakpointsFor": {
+				"languageIds": [
+					"flow"
+				]
+			}
 		}]
 	},
 	"scripts": {
