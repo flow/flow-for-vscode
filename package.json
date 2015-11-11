@@ -1,5 +1,6 @@
 {
 	"name": "vscode-flow",
+	"displayName": "Flow Language Support",
 	"description": "Flow support for VS Code",
 	"version": "0.0.1",
 	"publisher": "",
@@ -7,19 +8,41 @@
 		"vscode": "0.10.x"
 	},
 	"categories": [
-		"Others"
+		"Language"
 	],
 	"activationEvents": [
-		"onCommand:extension.sayHello"
+		"onLanguage:flow"
 	],
-	"main": "./extension",
+	"main": "./build/flowMain",
 	"contributes": {
-		"commands": [{
-			"command": "extension.sayHello",
-			"title": "Hello World"
+		"languages": [
+			{
+				"id": "flow",
+				"firstLine": "\\/\\* @flow \\*\\/",
+				"aliases": [
+					"Flow"
+				]
+			}
+		],
+		"grammars": [{
+			"language": "flow",
+			"scopeName": "source.js.jsx",
+			"path": "./syntaxes/Babel Language.json"
 		}]
 	},
+	"scripts": {
+		"vscode:prepublish": "babel ./src --out-dir=./build"
+	},
 	"devDependencies": {
-		"vscode": "0.10.x"
+		"vscode": "0.10.x",
+		"babel-cli": "^6.1.4",
+		"babel-plugin-transform-flow-strip-types": "^6.0.14"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/flowtype/vscode-flow.git"
+	},
+	"bugs": {
+		"url": "https://github.com/flowtype/vscode-flow/issues"
 	}
 }
