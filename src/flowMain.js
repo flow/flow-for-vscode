@@ -1,9 +1,12 @@
 /* @flow */
 
 var vscode = require('vscode');
+var config = require('./flowConfig');
 
 function activate(context) {
-	console.log('Congratulations, your extension "vscode-flow" is now active!');
+	
+	// Configure Language
+	config.configure();
 }
 
 exports.activate = activate;
