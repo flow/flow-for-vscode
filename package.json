@@ -35,8 +35,8 @@
 		}]
 	},
 	"scripts": {
-		"vscode:prepublish": "babel ./src --out-dir=./build",
-		"compile": "babel --watch ./src --out-dir=./build"
+		"vscode:prepublish": "babel ./lib --out-dir=./build",
+		"compile": "babel --watch ./lib --out-dir=./build"
 	},
 	"devDependencies": {
 		"vscode": "0.10.x",

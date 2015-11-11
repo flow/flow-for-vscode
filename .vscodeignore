@@ -1,5 +1,5 @@
 .vscode/**
 **/*.map
-src
+lib
 .gitignore
 vsc-extension-quickstart.md
