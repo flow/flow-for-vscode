@@ -28,6 +28,10 @@
 			"language": "flow",
 			"scopeName": "source.js.jsx",
 			"path": "./syntaxes/Babel Language.json"
+		}],
+		"snippets": [{
+			"language": "flow",
+			"path": "./snippets/flow.json"
 		}]
 	},
 	"scripts": {
