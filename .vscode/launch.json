@@ -10,8 +10,7 @@
 			"args": ["--extensionDevelopmentPath=${workspaceRoot}" ],
 			"stopOnEntry": false,
 			"sourceMaps": true,
-			"outDir": "build",
-			"preLaunchTask": "npm"
+			"outDir": "build"
 		}
 	]
 }

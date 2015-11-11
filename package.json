@@ -51,7 +51,7 @@
 	},
 	"scripts": {
 		"vscode:prepublish": "babel ./lib --out-dir=./build",
-		"compile": "babel ./lib --out-dir=./build --source-maps"
+		"compile": "babel ./lib --watch --out-dir=./build --source-maps"
 	},
 	"devDependencies": {
 		"vscode": "0.10.x",
