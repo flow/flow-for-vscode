@@ -9,7 +9,7 @@
 			"runtimeExecutable": "${execPath}",
 			"args": ["--extensionDevelopmentPath=${workspaceRoot}" ],
 			"stopOnEntry": false,
-			// "sourceMaps": true,
+			"sourceMaps": true,
 			"outDir": "build",
 			"preLaunchTask": "npm"
 		}
