@@ -1,0 +1,25 @@
+{
+	"name": "vscode-flow",
+	"description": "Flow support for VS Code",
+	"version": "0.0.1",
+	"publisher": "",
+	"engines": {
+		"vscode": "0.10.x"
+	},
+	"categories": [
+		"Others"
+	],
+	"activationEvents": [
+		"onCommand:extension.sayHello"
+	],
+	"main": "./extension",
+	"contributes": {
+		"commands": [{
+			"command": "extension.sayHello",
+			"title": "Hello World"
+		}]
+	},
+	"devDependencies": {
+		"vscode": "0.10.x"
+	}
+}
