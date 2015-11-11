@@ -2,7 +2,7 @@
 
 var vscode = require('vscode');
 
-function configure() {
+function configure(): void {
 	vscode.languages.setLanguageConfiguration('flow', {
 		indentationRules: {
 			decreaseIndentPattern: /^(.*\*\/)?\s*\}.*$/,

@@ -10,17 +10,8 @@
 			"args": ["--extensionDevelopmentPath=${workspaceRoot}" ],
 			"stopOnEntry": false,
 			// "sourceMaps": true,
-			"outDir": "build"
-		},
-		{
-			"name": "Launch Tests",
-			"type": "extensionHost",
-			"request": "launch",
-			"runtimeExecutable": "${execPath}",
-			"args": ["--extensionDevelopmentPath=${workspaceRoot}", "--extensionTestsPath=${workspaceRoot}/out/test" ],
-			"stopOnEntry": false,
-			// "sourceMaps": true,
-			"outDir": "build"
+			"outDir": "build",
+			"preLaunchTask": "npm"
 		}
 	]
 }
