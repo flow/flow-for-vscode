@@ -32,6 +32,14 @@
 		"snippets": [{
 			"language": "flow",
 			"path": "./snippets/flow.json"
+		}],
+		"debuggers": [{
+			"type": "extensionHost",
+			"enableBreakpointsFor": {
+				"languageIds": [
+					"flow"
+				]
+			}
 		}]
 	},
 	"scripts": {
