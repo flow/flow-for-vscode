@@ -6,5 +6,9 @@
 	},
 	"search.exclude": {
 		"build": true
-	}
+	},
+	
+	// Disable any JS validation to not interfer with Flow
+	"javascript.validate.syntaxValidation": false,
+	"javascript.validate.semanticValidation": false
 }

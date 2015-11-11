@@ -26,5 +26,16 @@
 	"isWatching": true,
 
 	// use the standard tsc in watch mode problem matcher to find compile problems in the output.
-	"problemMatcher": "$tsc-watch"
+	"problemMatcher": {
+		"owner": "babel",
+		"fileLocation": ["relative", "${workspaceRoot}"],
+		"pattern": {
+			"regexp": "^(SyntaxError): (.*?): (.*?) \\((\\d+):(\\d+)\\)$",
+			"file": 2,
+			"line": 4,
+			"column": 5,
+			"severity": 1,
+			"message": 3
+		}
+	}
 }
