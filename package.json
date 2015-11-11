@@ -18,7 +18,14 @@
 		"languages": [
 			{
 				"id": "flow",
-				"firstLine": "\\/\\* @flow \\*\\/",
+				"firstLine": "^\\/\\* @flow \\*\\/$",
+				"aliases": [
+					"Flow"
+				]
+			},
+			{
+				"id": "flow",
+				"firstLine": "^[\"|']use babel[\"|'];$",
 				"aliases": [
 					"Flow"
 				]
