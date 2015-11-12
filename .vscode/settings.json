@@ -1,7 +1,7 @@
 // Place your settings in this file to overwrite default and user settings.
 {
 	"files.exclude": {
-		"build": false, // set this to true to hide the "build" folder with the compiled JS files,
+		"build": true, // set this to true to hide the "build" folder with the compiled JS files,
 		"npm-debug.log**": true
 	},
 	"search.exclude": {
