@@ -35,6 +35,9 @@
 			"language": "flow",
 			"scopeName": "source.js.jsx",
 			"path": "./syntaxes/Babel Language.json"
+		}, {
+			"scopeName": "source.regexp.babel",
+			"path": "./syntaxes/Babel Regex.json"
 		}],
 		"snippets": [{
 			"language": "flow",
