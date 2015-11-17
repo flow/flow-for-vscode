@@ -2,4 +2,3 @@
 **/*.map
 lib
 .gitignore
-vsc-extension-quickstart.md

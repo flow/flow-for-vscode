@@ -74,6 +74,7 @@
 		"babel-preset-stage-1": "^6.1.2",
 		"regenerator": "^0.8.42"
 	},
+	"icon": "flow-logo.png",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/flowtype/vscode-flow.git"
