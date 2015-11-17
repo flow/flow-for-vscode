@@ -1,15 +1,17 @@
 {
 	"name": "vscode-flow",
-	"displayName": "Flow Language Support",
-	"description": "Flow support for VS Code",
 	"version": "0.0.1",
 	"publisher": "",
+	"description": "Flow support for VS Code",
+	"displayName": "Flow Language Support",
 	"engines": {
 		"vscode": "0.10.x"
 	},
 	"categories": [
-		"Language"
+		"Language",
+		"Linters"
 	],
+	"private": true,
 	"activationEvents": [
 		"onLanguage:flow"
 	],
