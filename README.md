@@ -1,22 +1,22 @@
 # README
 
-This extension adds [flow](http://flowtype.org) support for VS Code.
+This extension adds [Flow](http://flowtype.org) support for VS Code. Flow is a static type checker, designed to find type errors in JavaScript programs.
 
-## Selfhost Setup
+## Setup
 
-* install Code: https://code.visualstudio.com/
-* git clone https://github.com/flowtype/vscode-flow.git
-* run `npm install`
-* open Code on `vscode-flow`
-* link the extension into Code: `ln -s ABSOLUTE_PATH_OF_VSCODE_FLOW ~/.vscode/extensions/vscode-flow`
-* reload Code (`Cmd+Shift+P`, `Reload Window`) to enable the extension
-* make changes to the extension and reload to selfhost on your changes
+* Flow is only supported on Mac and Linux, follow [flowtype.org](http://flowtype.org/docs/getting-started.html#_) to get started
+* You need a `.flowconfig` in your workspace to enable the flow features
+* Make sure you are able to run the `flow` command from the command line
 
-## Development
+## Features
 
-* you can use the built-in babel task to start babel in watch mode (`Cmd+Shift+B` to start it, `Cmd+Shift+U` to toggle output)
-* make changes 
-* open debug viewlet (`Cmd+Shift+D`) and run the extension to try changes (`F5`)
-* from the opened instance open a folder with flow files (`File | Open...`)
+* Syntax Coloring
+* IntelliSense
+* Go to Definition / Peek Definition
+* Diagnostics (Errors, Warnings)
+
+## Known Issues
+
+* when you create a new file and add the `/* @flow */` to the beginning you need to manually change the mode from the status bar to `Flow`
 
 ** Enjoy!**
