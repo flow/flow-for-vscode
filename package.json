@@ -1,5 +1,5 @@
 {
-	"name": "vscode-flow",
+	"name": "flow-for-vscode",
 	"version": "0.0.1",
 	"publisher": "",
 	"description": "Flow support for VS Code",
@@ -79,9 +79,9 @@
 	"icon": "flow-logo.png",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/flowtype/vscode-flow.git"
+		"url": "https://github.com/flowtype/flow-for-vscode.git"
 	},
 	"bugs": {
-		"url": "https://github.com/flowtype/vscode-flow/issues"
+		"url": "https://github.com/flowtype/flow-for-vscode/issues"
 	}
 }
