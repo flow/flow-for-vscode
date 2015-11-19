@@ -23,6 +23,10 @@ Follow the [instructions](https://code.visualstudio.com/docs/editor/extension-ga
 
 * when you create a new file and add the `/* @flow */` to the beginning you need to manually change the mode from the status bar to `Flow`
 
+## About
+
+This plugin is built on top of [Nuclide](https://github.com/facebook/nuclide)'s Flow support, the [nuclide-flow-base](https://github.com/facebook/nuclide/tree/master/pkg/nuclide/flow-base) npm package.
+
 ## Contributing
 
 * please refer to [CONTRIBUTING.md](CONTRIBUTING.md)
