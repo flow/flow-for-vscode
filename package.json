@@ -8,7 +8,7 @@
 		"vscode": "0.10.x"
 	},
 	"categories": [
-		"Language",
+		"Languages",
 		"Linters"
 	],
 	"private": true,
