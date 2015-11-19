@@ -62,8 +62,8 @@
 		}]
 	},
 	"scripts": {
-		"vscode:prepublish": "babel ./lib --out-dir=./build",
-		"compile": "./compile.sh"
+		"vscode:prepublish": "./compile.sh",
+		"compile": "./compile.sh --watch"
 	},
 	"dependencies": {
 		"nuclide-flow-base": "0.0.34"

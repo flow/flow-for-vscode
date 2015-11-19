@@ -12,5 +12,5 @@ babel ./node_modules/nuclide-flow-base/lib/FlowService.js > ./node_modules/nucli
 # This works out because transpilation converges to a fixed point.
 mv ./node_modules/nuclide-flow-base/lib/FlowService-transpiled.js ./node_modules/nuclide-flow-base/lib/FlowService.js
 
-echo "Starting watch"
-babel ./lib --watch --out-dir=./build --source-maps
+echo "Transpiling ./lib"
+babel ./lib --out-dir=./build --source-maps $@
