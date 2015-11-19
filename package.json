@@ -1,6 +1,6 @@
 {
 	"name": "flow-for-vscode",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "flowtype",
 	"description": "Flow support for VS Code",
 	"displayName": "Flow Language Support",
