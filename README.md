@@ -24,4 +24,4 @@ This extension adds [Flow](http://flowtype.org) support for VS Code. Flow is a s
 * please refer to [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## License
-[BSD](LICENSE)
+[See here](LICENSE)
