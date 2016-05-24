@@ -11,6 +11,7 @@ Follow the [instructions](https://code.visualstudio.com/docs/editor/extension-ga
 * Flow is only supported on Mac and Linux, follow [flowtype.org](http://flowtype.org/docs/getting-started.html#_) to get started
 * You need a `.flowconfig` in your workspace to enable the flow features
 * Make sure you are able to run the `flow` command from the command line
+* set Workspace preference with `"javascript.validate.syntaxValidation": false`.
 
 ## Features
 
@@ -18,10 +19,6 @@ Follow the [instructions](https://code.visualstudio.com/docs/editor/extension-ga
 * IntelliSense
 * Go to Definition / Peek Definition
 * Diagnostics (Errors, Warnings)
-
-## Known Issues
-
-* when you create a new file and add the `/* @flow */` to the beginning you need to manually change the mode from the status bar to `Flow`
 
 ## About
 
