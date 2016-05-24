@@ -13,28 +13,12 @@
 	],
 	"private": true,
 	"activationEvents": [
-		"onLanguage:flow"
+		"onLanguage:javascript"
 	],
 	"main": "./build/flowMain",
 	"contributes": {
-		"languages": [
-			{
-				"id": "flow",
-				"firstLine": "^\\/\\* @flow \\*\\/$",
-				"aliases": [
-					"Flow"
-				]
-			},
-			{
-				"id": "flow",
-				"firstLine": "^[\"|']use babel[\"|'];$",
-				"aliases": [
-					"Flow"
-				]
-			}
-		],
 		"grammars": [{
-			"language": "flow",
+			"language": "javascript",
 			"scopeName": "source.js.jsx",
 			"path": "./syntaxes/Babel Language.json"
 		}, {
@@ -42,21 +26,21 @@
 			"path": "./syntaxes/Babel Regex.json"
 		}],
 		"snippets": [{
-			"language": "flow",
+			"language": "javascript",
 			"path": "./snippets/flow.json"
 		}],
 		"debuggers": [{
 			"type": "extensionHost",
 			"enableBreakpointsFor": {
 				"languageIds": [
-					"flow"
+					"javascript"
 				]
 			}
 		},{
 			"type": "node",
 			"enableBreakpointsFor": {
 				"languageIds": [
-					"flow"
+					"javascript"
 				]
 			}
 		}]
@@ -66,8 +50,8 @@
 		"compile": "./compile.sh --watch"
 	},
 	"dependencies": {
-		"nuclide-flow-base": "0.0.34",
-		"regenerator": "^0.8.42"
+		"nuclide-flow-base": "0.0.35",
+		"regenerator-runtime": "^0.9.5"
 	},
 	"devDependencies": {
 		"vscode": "0.10.x",
