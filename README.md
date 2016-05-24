@@ -11,7 +11,7 @@ Follow the [instructions](https://code.visualstudio.com/docs/editor/extension-ga
 * Flow is only supported on Mac and Linux, follow [flowtype.org](http://flowtype.org/docs/getting-started.html#_) to get started
 * You need a `.flowconfig` in your workspace to enable the flow features
 * Make sure you are able to run the `flow` command from the command line
-* set Workspace preference with `"javascript.validate.syntaxValidation": false`.
+* Set workspace preference with `"javascript.validate.syntaxValidation": false`.
 
 ## Features
 
@@ -19,6 +19,10 @@ Follow the [instructions](https://code.visualstudio.com/docs/editor/extension-ga
 * IntelliSense
 * Go to Definition / Peek Definition
 * Diagnostics (Errors, Warnings)
+
+## Known Issues
+
+* You should set workspace preference to disabe default syntax validation from Visual Studio Code.
 
 ## About
 
