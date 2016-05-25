@@ -22,7 +22,7 @@ Follow the [instructions](https://code.visualstudio.com/docs/editor/extension-ga
 
 ## Known Issues
 
-* You should set workspace preference to disabe default syntax validation from Visual Studio Code.
+* You should set workspace preference to disable default syntax validation from Visual Studio Code: `"javascript.validate.syntaxValidation": false`.
 
 ## About
 
