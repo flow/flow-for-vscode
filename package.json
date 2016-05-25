@@ -1,71 +1,93 @@
 {
-	"name": "flow-for-vscode",
-	"version": "0.0.3",
-	"publisher": "flowtype",
-	"description": "Flow support for VS Code",
-	"displayName": "Flow Language Support",
-	"engines": {
-		"vscode": "0.10.x"
-	},
-	"categories": [
-		"Languages",
-		"Linters"
-	],
-	"private": true,
-	"activationEvents": [
-		"onLanguage:javascript"
-	],
-	"main": "./build/flowMain",
-	"contributes": {
-		"grammars": [{
-			"language": "javascript",
-			"scopeName": "source.js.jsx",
-			"path": "./syntaxes/Babel Language.json"
-		}, {
-			"scopeName": "source.regexp.babel",
-			"path": "./syntaxes/Babel Regex.json"
-		}],
-		"snippets": [{
-			"language": "javascript",
-			"path": "./snippets/flow.json"
-		}],
-		"debuggers": [{
-			"type": "extensionHost",
-			"enableBreakpointsFor": {
-				"languageIds": [
-					"javascript"
-				]
-			}
-		},{
-			"type": "node",
-			"enableBreakpointsFor": {
-				"languageIds": [
-					"javascript"
-				]
-			}
-		}]
-	},
-	"scripts": {
-		"vscode:prepublish": "./compile.sh",
-		"compile": "./compile.sh --watch"
-	},
-	"dependencies": {
-		"nuclide-flow-base": "0.0.35",
-		"regenerator-runtime": "^0.9.5"
-	},
-	"devDependencies": {
-		"vscode": "0.10.x",
-		"babel-cli": "^6.1.4",
-		"babel-plugin-transform-flow-strip-types": "^6.0.14",
-		"babel-preset-es2015": "^6.1.4",
-		"babel-preset-stage-1": "^6.1.2"
-	},
-	"icon": "flow-logo.png",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/flowtype/flow-for-vscode.git"
-	},
-	"bugs": {
-		"url": "https://github.com/flowtype/flow-for-vscode/issues"
-	}
+  "name": "flow-for-vscode",
+  "version": "0.1.0",
+  "publisher": "flowtype",
+  "description": "Flow support for VS Code",
+  "displayName": "Flow Language Support",
+  "engines": {
+    "vscode": "0.10.x"
+  },
+  "categories": [
+    "Languages",
+    "Linters"
+  ],
+  "private": true,
+  "activationEvents": [
+    "onLanguage:javascript"
+  ],
+  "main": "./build/flowMain",
+  "contributes": {
+    "grammars": [
+      {
+        "language": "javascript",
+        "scopeName": "source.js.jsx",
+        "path": "./syntaxes/Babel Language.json"
+      },
+      {
+        "scopeName": "source.regexp.babel",
+        "path": "./syntaxes/Babel Regex.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/flow.json"
+      }
+    ],
+    "debuggers": [
+      {
+        "type": "extensionHost",
+        "enableBreakpointsFor": {
+          "languageIds": [
+            "javascript"
+          ]
+        }
+      },
+      {
+        "type": "node",
+        "enableBreakpointsFor": {
+          "languageIds": [
+            "javascript"
+          ]
+        }
+      }
+    ],
+        "configuration": {
+            "type": "object",
+            "title": "Flow Configurations",
+            "properties": {
+                "flow.pathToFlow": {
+                    "type": "string",
+                    "default": "flow",
+                    "description": "Path to flow binary"
+                }
+            }
+        }
+    },
+  "scripts": {
+    "vscode:prepublish": "./compile.sh",
+    "compile": "./compile.sh --watch"
+  },
+  "dependencies": {
+    "fs-plus": "^2.8.2",
+    "nuclide-flow-base": "0.0.35",
+    "regenerator-runtime": "^0.9.5",
+    "rxjs": "^5.0.0-beta.8",
+    "shell-quote": "^1.6.0"
+  },
+  "devDependencies": {
+    "vscode": "0.10.x",
+    "babel-cli": "^6.1.4",
+    "babel-plugin-transform-flow-strip-types": "^6.0.14",
+    "babel-preset-es2015": "^6.1.4",
+    "babel-preset-stage-1": "^6.1.2"
+  },
+  "icon": "flow-logo.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flowtype/flow-for-vscode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/flowtype/flow-for-vscode/issues"
+  }
 }
