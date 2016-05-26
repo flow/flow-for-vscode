@@ -88,6 +88,11 @@
                     "type": "string",
                     "default": "flow",
                     "description": "Path to flow binary"
+                },
+                "flow.stopFlowOnExit": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Stop Flow on Exit"
                 }
             }
         }
