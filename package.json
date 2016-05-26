@@ -13,11 +13,33 @@
   ],
   "private": true,
   "activationEvents": [
+    "onLanguage:flow",
     "onLanguage:javascript"
   ],
   "main": "./build/flowMain",
   "contributes": {
+    "languages": [
+			{
+				"id": "flow",
+				"firstLine": "^\\/\\*\\* @flow \\*\\/$",
+				"aliases": [
+					"Flow"
+				]
+			},
+			{
+				"id": "flow",
+				"firstLine": "^[\"|']use babel[\"|'];$",
+				"aliases": [
+					"Flow"
+				]
+			}
+		],
     "grammars": [
+      {
+        "language": "flow",
+        "scopeName": "source.js.jsx",
+        "path": "./syntaxes/Babel Language.json"
+      },
       {
         "language": "javascript",
         "scopeName": "source.js.jsx",
@@ -30,6 +52,10 @@
     ],
     "snippets": [
       {
+        "language": "flow",
+        "path": "./snippets/flow.json"
+      },
+      {
         "language": "javascript",
         "path": "./snippets/flow.json"
       }
@@ -39,7 +65,8 @@
         "type": "extensionHost",
         "enableBreakpointsFor": {
           "languageIds": [
-            "javascript"
+            "javascript",
+            "flow"
           ]
         }
       },
@@ -47,7 +74,8 @@
         "type": "node",
         "enableBreakpointsFor": {
           "languageIds": [
-            "javascript"
+            "javascript",
+            "flow"
           ]
         }
       }
