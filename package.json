@@ -13,8 +13,8 @@
   ],
   "private": true,
   "activationEvents": [
-    "onLanguage:flow",
-    "onLanguage:javascript"
+    "onLanguage:javascript",
+    "onLanguage:flow"
   ],
   "main": "./build/flowMain",
   "contributes": {
