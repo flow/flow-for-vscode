@@ -13,6 +13,7 @@
   ],
   "private": true,
   "activationEvents": [
+    "onLanguage:javascriptreact",
     "onLanguage:javascript",
     "onLanguage:flow"
   ],
