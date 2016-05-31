@@ -11,7 +11,7 @@ Follow the [instructions](https://code.visualstudio.com/docs/editor/extension-ga
 * Flow is only supported on Mac and Linux, follow [flowtype.org](http://flowtype.org/docs/getting-started.html#_) to get started
 * You need a `.flowconfig` in your workspace to enable the flow features
 * Make sure you are able to run the `flow` command from the command line
-* Set workspace preference with `"javascript.validate.syntaxValidation": false`.
+* Set workspace preference with `"javascript.validate.enable": false`.
 
 ## Features
 
