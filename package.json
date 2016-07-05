@@ -1,6 +1,6 @@
 {
   "name": "flow-for-vscode",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publisher": "flowtype",
   "description": "Flow support for VS Code",
   "displayName": "Flow Language Support",
@@ -20,21 +20,21 @@
   "main": "./build/flowMain",
   "contributes": {
     "languages": [
-			{
-				"id": "flow",
-				"firstLine": "^\\/\\*\\* @flow \\*\\/$",
-				"aliases": [
-					"Flow"
-				]
-			},
-			{
-				"id": "flow",
-				"firstLine": "^[\"|']use babel[\"|'];$",
-				"aliases": [
-					"Flow"
-				]
-			}
-		],
+      {
+        "id": "flow",
+        "firstLine": "^\\/\\*\\* @flow \\*\\/$",
+        "aliases": [
+          "Flow"
+        ]
+      },
+      {
+        "id": "flow",
+        "firstLine": "^[\"|']use babel[\"|'];$",
+        "aliases": [
+          "Flow"
+        ]
+      }
+    ],
     "grammars": [
       {
         "language": "flow",
@@ -81,28 +81,29 @@
         }
       }
     ],
-        "configuration": {
-            "type": "object",
-            "title": "Flow Configurations",
-            "properties": {
-                "flow.pathToFlow": {
-                    "type": "string",
-                    "default": "flow",
-                    "description": "Path to flow binary"
-                },
-                "flow.stopFlowOnExit": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "Stop Flow on Exit"
-                }
-            }
+    "configuration": {
+      "type": "object",
+      "title": "Flow Configurations",
+      "properties": {
+        "flow.pathToFlow": {
+          "type": "string",
+          "default": "flow",
+          "description": "Path to flow binary"
+        },
+        "flow.stopFlowOnExit": {
+          "type": "boolean",
+          "default": true,
+          "description": "Stop Flow on Exit"
         }
-    },
+      }
+    }
+  },
   "scripts": {
     "vscode:prepublish": "./compile.sh",
     "compile": "./compile.sh --watch"
   },
   "dependencies": {
+    "event-kit": "^2.0.0",
     "fs-plus": "^2.8.2",
     "nuclide-flow-base": "0.0.35",
     "regenerator-runtime": "^0.9.5",
