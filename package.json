@@ -105,7 +105,6 @@
   "dependencies": {
     "event-kit": "^2.0.0",
     "fs-plus": "^2.8.2",
-    "nuclide-flow-base": "0.0.35",
     "regenerator-runtime": "^0.9.5",
     "rxjs": "^5.0.0-beta.8",
     "shell-quote": "^1.6.0"
