@@ -5,7 +5,7 @@
   "description": "Flow support for VS Code",
   "displayName": "Flow Language Support",
   "engines": {
-    "vscode": "0.10.x"
+    "vscode": "1.3.x"
   },
   "categories": [
     "Languages",
@@ -14,77 +14,19 @@
   "private": true,
   "activationEvents": [
     "onLanguage:javascriptreact",
-    "onLanguage:javascript",
-    "onLanguage:flow"
+    "onLanguage:javascript"
   ],
   "main": "./build/flowMain",
   "contributes": {
-    "languages": [
-      {
-        "id": "flow",
-        "firstLine": "^\\/\\*\\* @flow \\*\\/$",
-        "aliases": [
-          "Flow"
-        ]
-      },
-      {
-        "id": "flow",
-        "firstLine": "^[\"|']use babel[\"|'];$",
-        "aliases": [
-          "Flow"
-        ]
-      }
-    ],
-    "grammars": [
-      {
-        "language": "flow",
-        "scopeName": "source.js.jsx",
-        "path": "./syntaxes/Babel Language.json"
-      },
-      {
-        "language": "javascript",
-        "scopeName": "source.js.jsx",
-        "path": "./syntaxes/Babel Language.json"
-      },
-      {
-        "scopeName": "source.regexp.babel",
-        "path": "./syntaxes/Babel Regex.json"
-      }
-    ],
-    "snippets": [
-      {
-        "language": "flow",
-        "path": "./snippets/flow.json"
-      },
-      {
-        "language": "javascript",
-        "path": "./snippets/flow.json"
-      }
-    ],
-    "debuggers": [
-      {
-        "type": "extensionHost",
-        "enableBreakpointsFor": {
-          "languageIds": [
-            "javascript",
-            "flow"
-          ]
-        }
-      },
-      {
-        "type": "node",
-        "enableBreakpointsFor": {
-          "languageIds": [
-            "javascript",
-            "flow"
-          ]
-        }
-      }
-    ],
     "configuration": {
       "type": "object",
       "title": "Flow Configurations",
       "properties": {
+        "flow.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Is flow enabled"
+        },
         "flow.pathToFlow": {
           "type": "string",
           "default": "flow",
@@ -103,14 +45,18 @@
     "compile": "./compile.sh --watch"
   },
   "dependencies": {
+    "dequeue": "^1.0.5",
     "event-kit": "^2.0.0",
     "fs-plus": "^2.8.2",
+    "fuzzaldrin": "^2.1.0",
+    "log4js": "^0.6.37",
     "regenerator-runtime": "^0.9.5",
     "rxjs": "^5.0.0-beta.8",
-    "shell-quote": "^1.6.0"
+    "shell-quote": "^1.6.0",
+    "temp": "^0.8.3"
   },
   "devDependencies": {
-    "vscode": "0.10.x",
+    "vscode": "0.11.x",
     "babel-cli": "^6.1.4",
     "babel-plugin-transform-flow-strip-types": "^6.0.14",
     "babel-preset-es2015": "^6.1.4",
