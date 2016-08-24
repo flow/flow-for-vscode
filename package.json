@@ -5,7 +5,7 @@
   "description": "Flow support for VS Code",
   "displayName": "Flow Language Support",
   "engines": {
-    "vscode": "1.3.x"
+    "vscode": "1.4.x"
   },
   "categories": [
     "Languages",
@@ -45,6 +45,7 @@
     "compile": "./compile.sh --watch"
   },
   "dependencies": {
+    "cross-spawn": "^4.0.0",
     "dequeue": "^1.0.5",
     "event-kit": "^2.0.0",
     "fs-plus": "^2.8.2",
