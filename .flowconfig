@@ -1,2 +1,15 @@
 [ignore]
-.*?/node_modules/.*
+<PROJECT_ROOT>/node_modules/.*/spec/.*
+
+[include]
+
+[libs]
+
+[options]
+suppress_comment=.*\\$FlowFixMe.*
+suppress_comment=.*\\$FlowIssue.*
+
+unsafe.enable_getters_and_setters=true
+
+[version]
+>=0.31.0
