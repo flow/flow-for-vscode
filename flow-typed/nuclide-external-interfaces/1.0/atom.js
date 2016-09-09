@@ -1006,7 +1006,6 @@ declare module 'atom' {
 // in type declarations.
 declare var Cursor: typeof atom$Cursor;
 declare var Panel: typeof atom$Panel;
-declare var TextEditor: typeof atom$TextEditor;
 
 type atom$UnhandledErrorEvent = {
   originalError: Object;
@@ -1138,7 +1137,7 @@ type atom$AutocompleteSuggestion = {
 }
 
 type atom$AutocompleteRequest = {
-  editor: TextEditor;
+  editor: atom$TextEditor;
   prefix: string;
   activatedManually: boolean;
 }
