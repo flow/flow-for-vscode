@@ -5,7 +5,7 @@
   "description": "Flow support for VS Code",
   "displayName": "Flow Language Support",
   "engines": {
-    "vscode": "1.4.x"
+    "vscode": "1.5.x"
   },
   "categories": [
     "Languages",
