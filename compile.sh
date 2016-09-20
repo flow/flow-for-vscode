@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "Transpiling ./lib"
-babel ./lib --out-dir=./build --source-maps $@
+node_modules/.bin/babel ./lib --out-dir=./build --source-maps $@

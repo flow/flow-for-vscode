@@ -1,4 +1,6 @@
 .vscode/**
 **/*.map
-lib
+lib/**
+flow-typed/**
 .gitignore
+.flowconfig
