@@ -13,12 +13,19 @@ Follow the [instructions](https://code.visualstudio.com/docs/editor/extension-ga
 * Make sure you are able to run the `flow` command from the command line
 * Set workspace preference with `"javascript.validate.enable": false`.
 
+## Configuration
+
+* `flow.pathToFlow` (default: 'flow') path to Flow that will be used for VSCode or Project
+* `flow.stopFlowOnExit` (default: true) stop flow server on exit from Project
+* `flow.enabled` (default: true) you can disable flow for some Project for example
+
 ## Features
 
 * Syntax Coloring
 * IntelliSense
 * Go to Definition / Peek Definition
 * Diagnostics (Errors, Warnings)
+* Hover type information
 
 ## Known Issues
 
@@ -26,7 +33,7 @@ Follow the [instructions](https://code.visualstudio.com/docs/editor/extension-ga
 
 ## About
 
-This plugin is built on top of [Nuclide](https://github.com/facebook/nuclide)'s Flow support, the [nuclide-flow-base](https://github.com/facebook/nuclide/tree/master/pkg/nuclide/flow-base) npm package.
+This plugin is built on top of [Nuclide](https://github.com/facebook/nuclide)'s Flow support.
 
 ## Contributing
 
