@@ -1,5 +1,5 @@
-// flow-typed signature: a8f20b54f5a496a08915bcbdcbe9b2fb
-// flow-typed version: 07eca72148/vscode_v0.11.x/flow_>=v0.32.x
+// flow-typed signature: b083b939da1c0cf7b3c76d53b2582a2d
+// flow-typed version: 94e9f7e0a4/vscode_v0.11.x/flow_>=v0.32.x
 
 declare module 'vscode' {
 
