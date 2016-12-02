@@ -36,6 +36,11 @@
                     "type": "boolean",
                     "default": true,
                     "description": "Stop Flow on Exit"
+                },
+                "flow.useNPMPackagedFlow": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Support using flow through your node_modules folder, WARNING: Checking this box is a security risk. When you open a project we will immediately run code contained within it."
                 }
             }
         }
