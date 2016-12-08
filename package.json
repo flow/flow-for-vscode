@@ -46,8 +46,8 @@
         }
     },
     "scripts": {
-        "vscode:prepublish": "./compile.sh",
-        "compile": "./compile.sh --watch",
+        "vscode:prepublish": "babel ./lib --out-dir=./build --source-maps",
+        "compile": "babel ./lib --out-dir=./build --source-maps --watch",
         "test": "flow check"
     },
     "dependencies": {
