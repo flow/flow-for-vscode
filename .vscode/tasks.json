@@ -22,6 +22,6 @@
 	// we run the custom script "compile" as defined in package.json
 	"args": ["run", "compile", "--loglevel", "silent"],
 
-	// Wether the babel compiler is started in watching mode
+	// Whether the babel compiler is started in watching mode
 	"isWatching": true
 }
