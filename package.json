@@ -43,7 +43,15 @@
                     "description": "Support using flow through your node_modules folder, WARNING: Checking this box is a security risk. When you open a project we will immediately run code contained within it."
                 }
             }
-        }
+        },
+        "languages": [{
+            "id": "javascript",
+            "aliases": ["JavaScript", "js"],
+            "filenamePatterns": [
+                "*.js.flow"
+            ]
+        }]
+
     },
     "scripts": {
         "vscode:prepublish": "babel ./lib --out-dir=./build --source-maps",
