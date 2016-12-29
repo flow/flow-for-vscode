@@ -9,6 +9,5 @@
 	},
 	
 	// Disable any JS validation to not interfer with Flow
-	"javascript.validate.syntaxValidation": false,
-	"javascript.validate.semanticValidation": false
+	"javascript.validate.enable": false
 }
