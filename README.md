@@ -31,6 +31,22 @@ Follow the [instructions](https://code.visualstudio.com/docs/editor/extension-ga
 
 * You should set workspace preference to disable default syntax validation from Visual Studio Code: `"javascript.validate.enable": false`.
 
+## Debugger configuration
+
+First, follow the [instructions](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations) to setup your launch configuration file, `launch.json`.
+
+To use [flow-remove-types](https://github.com/flowtype/flow-remove-types):
+
+* Follow the [flow-remove-type Quick Start](https://flowtype.org/docs/running.html#flow-remove-types-quick-start).
+* In `launch.json`, add `"runtimeArgs": ["-r", "flow-remove-types/register"]` to the "launch" configuration.
+
+To use [Babel](https://babeljs.io):
+
+* Follow the [Babel Quick Start](https://flowtype.org/docs/running.html#babel-quick-start).
+* Install [babel-register](http://babeljs.io/docs/core-packages/babel-register/).
+* In `.babelrc`, add `"retainLines": true`.
+* In `launch.json`, add `"runtimeArgs": ["-r", "babel-register"]` to the "launch" configuration.
+
 ## About
 
 This plugin is built on top of [Nuclide](https://github.com/facebook/nuclide)'s Flow support.
