@@ -10,7 +10,7 @@ Follow the [instructions](https://code.visualstudio.com/docs/editor/extension-ga
 
 * Flow is [supported](https://github.com/facebook/flow#requirements) on Mac, 64-bit Windows, and Linux, follow [flowtype.org](http://flowtype.org/docs/getting-started.html#_) to get started
 * You need a `.flowconfig` in your workspace to enable the flow features
-* Make sure you are able to run the `flow` command from the command line
+* Make sure you are able to run the `flow` command from the command line ( or you have `flow.useNPMPackagedFlow` option in `true` )
 * Set workspace preference with `"javascript.validate.enable": false`.
 
 ## Configuration
@@ -18,6 +18,7 @@ Follow the [instructions](https://code.visualstudio.com/docs/editor/extension-ga
 * `flow.pathToFlow` (default: 'flow') path to Flow that will be used for VSCode or Project
 * `flow.stopFlowOnExit` (default: true) stop flow server on exit from Project
 * `flow.enabled` (default: true) you can disable flow for some Project for example
+* `flow.useNPMPackagedFlow` (default: false) you can also run Flow by defining it in your `package.json`
 
 ## Features
 
