@@ -1,5 +1,5 @@
 ### Master
-
+* Uses the absolute path to the `where` command provided by Windows - JPanneel #69
 * Uses the new VS Code autocompletion API for functions - orta #51
 * When you want to work on the flow-for-vscode project, pressing run will start the
   babel build watcher task - orta

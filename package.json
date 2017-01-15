@@ -30,7 +30,7 @@
                 "flow.pathToFlow": {
                     "type": "string",
                     "default": "flow",
-                    "description": "Path to flow binary"
+                    "description": "Path to flow binary. On Windows use '\\\\' as directory separator"
                 },
                 "flow.stopFlowOnExit": {
                     "type": "boolean",
