@@ -3,4 +3,7 @@
 lib/**
 flow-typed/**
 .gitignore
+.gitattributes
+.travis.yml
 .flowconfig
+npm-debug.*
