@@ -1,4 +1,7 @@
 ### Master
+
+### 0.5.0
+
 * Uses the absolute path to the `where` command provided by Windows - JPanneel #69
 * Uses the new VS Code autocompletion API for functions - orta #51
 * When you want to work on the flow-for-vscode project, pressing run will start the
@@ -8,7 +11,7 @@
 * Fixes "File not found" error with diagnostics when `flow status --json` provides
   non-absolute file paths - ryanashcraft #77
 
-### 4.0
+### 0.4.0
 
 * Adds the ability to use flow from your project's node_modules folder. 
   This is a security risk ( see https://github.com/facebook/nuclide/issues/570) and so it
