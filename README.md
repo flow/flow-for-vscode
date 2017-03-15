@@ -14,6 +14,7 @@ Follow the [instructions](https://code.visualstudio.com/docs/editor/extension-ga
 * Set workspace preference with `"javascript.validate.enable": false`.
 
 ## Configuration
+You can specify a configuration by amending the VS Code `settings.json` file. Access this through Preferences -> Settings. You must reload VS Code after installing this extension for these settings to take affect.
 
 * `flow.pathToFlow` (default: 'flow') path to Flow that will be used for VSCode or Project
 * `flow.stopFlowOnExit` (default: true) stop flow server on exit from Project
