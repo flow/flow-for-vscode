@@ -8,7 +8,7 @@
 
 // A task runner that calls a custom npm script that compiles the extension.
 {
-	"version": "0.3.2",
+	"version": "0.1.0",
 
 	// we want to run npm
 	"command": "npm",
@@ -23,5 +23,5 @@
 	"args": ["run", "compile", "--loglevel", "silent"],
 
 	// Whether the babel compiler is started in watching mode
-	"isWatching": true
+	"isBackground": true
 }
