@@ -32,6 +32,11 @@
                     "default": "flow",
                     "description": "Path to flow binary. On Windows use '\\\\' as directory separator"
                 },
+                "flow.showStatus": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "If true will display flow status is the statusbar"
+                },
                 "flow.stopFlowOnExit": {
                     "type": "boolean",
                     "default": true,
@@ -72,7 +77,8 @@
         "rxjs": "^5.0.0-beta.8",
         "semver": "^5.3.0",
         "shell-quote": "^1.6.0",
-        "temp": "^0.8.3"
+        "temp": "^0.8.3",
+        "elegant-spinner": "^1.0.1"
     },
     "devDependencies": {
         "babel-cli": "^6.1.4",
