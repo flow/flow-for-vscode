@@ -19,6 +19,7 @@ Follow the [instructions](https://code.visualstudio.com/docs/editor/extension-ga
 * `flow.stopFlowOnExit` (default: true) stop flow server on exit from Project
 * `flow.enabled` (default: true) you can disable flow for some Project for example
 * `flow.useNPMPackagedFlow` (default: false) you can also run Flow by defining it in your `package.json`
+* `flow.showStatus` (default: `true`) If `true` will display a spinner in the statusbar while flow is type checking.
 
 ## Features
 
@@ -27,6 +28,7 @@ Follow the [instructions](https://code.visualstudio.com/docs/editor/extension-ga
 * Go to Definition / Peek Definition
 * Diagnostics (Errors, Warnings)
 * Hover type information
+* Progress indicator
 
 ## Known Issues
 
