@@ -74,6 +74,7 @@
         "event-kit": "^2.0.0",
         "fs-plus": "^2.8.2",
         "fuzzaldrin": "^2.1.0",
+        "js-beautify": "^1.6.12",
         "log4js": "^0.6.37",
         "lru-cache": "^4.0.1",
         "mkdirp": "^0.5.1",
