@@ -1,5 +1,7 @@
 ### Master
 
+### 0.6.0
+
 * Adds the status indicator (spinner) to the statusbar which appears when flow is
   type checking, so that users can tell if everything type checked or if flow is
   just not finished yet. Indicator can be disabled by setting `flow.showStatus` to
