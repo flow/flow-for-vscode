@@ -20,12 +20,11 @@ You can specify a configuration by amending the VS Code `settings.json` file. Ac
 * `flow.stopFlowOnExit` (default: true) stop flow server on exit from Project
 * `flow.enabled` (default: true) you can disable flow for some Project for example
 * `flow.useNPMPackagedFlow` (default: false) you can also run Flow by defining it in your `package.json`
-* `flow.showStatus` (default: `true`) If `true` will display a spinner in the statusbar while flow is type checking.
+* `flow.showStatus` (default: `true`) If `true` will display a spinner in the status-bar while flow is type checking.
 * `flow.runOnEdit` (default: `true`) If `true` will run flow on every edit, otherwise will run only when changes are saved.
 
 ## Features
 
-* Syntax Coloring
 * IntelliSense
 * Go to Definition / Peek Definition
 * Diagnostics (Errors, Warnings)
@@ -35,6 +34,7 @@ You can specify a configuration by amending the VS Code `settings.json` file. Ac
 ## Known Issues
 
 * You should set workspace preference to disable default syntax validation from Visual Studio Code: `"javascript.validate.enable": false`.
+* There are some aspects of Flow syntax which are not supported by the default VS Code JavaScript grammar, if you're having problems with syntax try [JavaScript Atom Grammar](https://marketplace.visualstudio.com/items?itemName=ms-vscode.js-atom-grammar).
 
 ## Debugger configuration
 
