@@ -1,5 +1,10 @@
 ### Master
 
+### 0.7.0
+
+* Bundles `flow-bin` with the plugin to use in cases where it has not been
+  installed globally or locally. - [@BrainMaestro][] [#118](https://github.com/flowtype/flow-for-vscode/pull/118)
+
 ### 0.6.0
 
 * Adds the status indicator (spinner) to the statusbar which appears when flow is
@@ -45,3 +50,4 @@
 [@thymikee]:https://github.com/thymikee
 [@JPanneel]:https://github.com/JPanneel
 [@ryanashcraft]:https://github.com/ryanashcraft
+[@BrainMaestro]:https://github.com/BrainMaestro
