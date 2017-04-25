@@ -21,7 +21,7 @@ You can specify a configuration by amending the VS Code `settings.json` file. Ac
 * `flow.enabled` (default: true) you can disable flow for some Project for example
 * `flow.useNPMPackagedFlow` (default: false) you can also run Flow by defining it in your `package.json`
 * `flow.showStatus` (default: `true`) If `true` will display a spinner in the status-bar while flow is type checking.
-* `flow.runOnEdit` (default: `true`) If `true` will run flow on every edit, otherwise will run only when changes are saved.
+* `flow.runOnEdit` (default: `false`) If `true` will run flow on every edit, otherwise will run only when changes are saved.
 
 ## Features
 
@@ -29,7 +29,7 @@ You can specify a configuration by amending the VS Code `settings.json` file. Ac
 * Go to Definition / Peek Definition
 * Diagnostics (Errors, Warnings)
 * Hover type information
-* Progress indicator
+* Toggle-able Code Coverage reports
 
 ## Known Issues
 
