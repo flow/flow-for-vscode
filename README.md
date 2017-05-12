@@ -29,7 +29,7 @@ You can specify a configuration by amending the VS Code `settings.json` file. Ac
 * Go to Definition / Peek Definition
 * Diagnostics (Errors, Warnings)
 * Hover type information
-* Progress indicator
+* Toggle-able Code Coverage reports
 
 ## Known Issues
 
