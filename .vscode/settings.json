@@ -2,7 +2,7 @@
 {
 	"files.exclude": {
 		// "build": true, // set this to true to hide the "build" folder with the compiled JS files,
-		"npm-debug.log": true
+		"npm-debug.log*": true
 	},
 	"search.exclude": {
 		"build": true
