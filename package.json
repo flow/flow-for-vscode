@@ -54,14 +54,18 @@
                 }
             }
         },
-        "languages": [{
-            "id": "javascript",
-            "aliases": ["JavaScript", "js"],
-            "filenamePatterns": [
-                "*.js.flow"
-            ]
-        }]
-
+        "languages": [
+            {
+                "id": "javascript",
+                "aliases": [
+                    "JavaScript",
+                    "js"
+                ],
+                "filenamePatterns": [
+                    "*.js.flow"
+                ]
+            }
+        ]
     },
     "scripts": {
         "vscode:prepublish": "babel ./lib --out-dir=./build --source-maps",
@@ -71,11 +75,13 @@
     "dependencies": {
         "cross-spawn": "^4.0.0",
         "dequeue": "^1.0.5",
+        "elegant-spinner": "^1.0.1",
         "event-kit": "^2.0.0",
         "flow-bin": "^0.43.0",
         "fs-plus": "^2.8.2",
         "fuzzaldrin": "^2.1.0",
         "js-beautify": "^1.6.12",
+        "lodash.debounce": "^4.0.8",
         "log4js": "^0.6.37",
         "lru-cache": "^4.0.1",
         "mkdirp": "^0.5.1",
@@ -84,8 +90,7 @@
         "rxjs": "^5.0.0-beta.8",
         "semver": "^5.3.0",
         "shell-quote": "^1.6.0",
-        "temp": "^0.8.3",
-        "elegant-spinner": "^1.0.1"
+        "temp": "^0.8.3"
     },
     "devDependencies": {
         "babel-cli": "^6.1.4",
