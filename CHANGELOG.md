@@ -4,6 +4,10 @@
 
 * Bundles `flow-bin` with the plugin to use in cases where it has not been
   installed globally or locally. - [@BrainMaestro][] [#118](https://github.com/flowtype/flow-for-vscode/pull/118)
+* Switched `flow.runOnEdit` to default to false for the moment, it's a great idea but we're seeing a lot of hung processes.
+  if you want to help improve this extension, taking a look into this would help us a lot - [@orta][] [#120](https://github.com/flowtype/flow-for-vscode/pull/120)
+
+
 
 ### 0.6.0
 

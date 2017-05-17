@@ -39,7 +39,7 @@
                 },
                 "flow.runOnEdit": {
                     "type": "boolean",
-                    "default": true,
+                    "default": false,
                     "description": "If true will run flow on every edit, otherwise will run only when changes are saved"
                 },
                 "flow.stopFlowOnExit": {
