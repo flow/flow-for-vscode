@@ -1,6 +1,6 @@
 {
     "name": "flow-for-vscode",
-    "version": "0.6.0",
+    "version": "0.7.0",
     "publisher": "flowtype",
     "description": "Flow support for VS Code",
     "displayName": "Flow Language Support",
@@ -77,7 +77,7 @@
         "dequeue": "^1.0.5",
         "elegant-spinner": "^1.0.1",
         "event-kit": "^2.0.0",
-        "flow-bin": "^0.43.0",
+        "flow-bin": "^0.46.0",
         "fs-plus": "^2.8.2",
         "fuzzaldrin": "^2.1.0",
         "js-beautify": "^1.6.12",

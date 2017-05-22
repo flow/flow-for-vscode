@@ -4,6 +4,7 @@
 
 * Bundles `flow-bin` with the plugin to use in cases where it has not been
   installed globally or locally. - [@BrainMaestro][] [#118](https://github.com/flowtype/flow-for-vscode/pull/118)
+* Improvements around flow file detection, and reducing the amount of duplicate requests to the flow server. - [@thymikee][] [#126](https://github.com/flowtype/flow-for-vscode/pull/126)
 
 ### 0.6.0
 
