@@ -51,6 +51,11 @@
                     "type": "boolean",
                     "default": false,
                     "description": "Support using flow through your node_modules folder, WARNING: Checking this box is a security risk. When you open a project we will immediately run code contained within it."
+                },
+                "flow.runOnAllFiles": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Run Flow on all files, No need to put //@flow comment on top of files."
                 }
             }
         },
