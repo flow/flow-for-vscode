@@ -1,5 +1,9 @@
 ### Master
 
+### 0.7.1
+* Adds a `flow.runOnAllFiles` option, which treats all files as if they had
+  `// @flow` at the top. - [@doshisid](https://github.com/doshisid) [#144](https://github.com/flowtype/flow-for-vscode/pull/144)
+
 ### 0.7.0
 
 * Bundles `flow-bin` with the plugin to use in cases where it has not been
