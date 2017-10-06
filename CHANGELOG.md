@@ -1,5 +1,10 @@
 ### Master
 
+### 0.7.2
+
+* Fixes for flow not re-checking on file changes- [@clintwood][]
+* Add more file extensions for flow support - [@clintwood][]
+
 ### 0.7.1
 * Adds a `flow.runOnAllFiles` option, which treats all files as if they had
   `// @flow` at the top. - [@doshisid](https://github.com/doshisid) [#144](https://github.com/flowtype/flow-for-vscode/pull/144)
@@ -56,3 +61,4 @@
 [@JPanneel]:https://github.com/JPanneel
 [@ryanashcraft]:https://github.com/ryanashcraft
 [@BrainMaestro]:https://github.com/BrainMaestro
+[@clintwood]:https://github.com/clintwood
