@@ -4,7 +4,7 @@ This extension adds [Flow](http://flowtype.org) support for VS Code. Flow is a s
 
 ## Installation
 
-Follow the [instructions](https://code.visualstudio.com/docs/editor/extension-gallery) for VS Code extension installation.
+Follow the [instructions](https://code.visualstudio.com/docs/editor/extension-gallery) for VS Code extension installation and install the `Flow Language Support` extension.
 
 ## Setup
 
