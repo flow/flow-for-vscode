@@ -18,10 +18,10 @@ Follow the [instructions](https://code.visualstudio.com/docs/editor/extension-ga
 ## Configuration
 You can specify a configuration by amending the VS Code `settings.json` file. Access this through Preferences -> Settings. You must reload VS Code after installing this extension for these settings to take affect.
 
-* `flow.pathToFlow` (default: 'flow') path to Flow that will be used for VSCode or Project
-* `flow.stopFlowOnExit` (default: true) stop flow server on exit from Project
-* `flow.enabled` (default: true) you can disable flow for some Project for example
-* `flow.useNPMPackagedFlow` (default: false) you can also run Flow by defining it in your `package.json`
+* `flow.pathToFlow` (default: 'flow') path to Flow that will be used for VSCode (eg; `"${workspaceRoot}/node_modules/.bin/flow"`). 
+* `flow.stopFlowOnExit` (default: true) stop flow server on exit from Project.
+* `flow.enabled` (default: true) you can disable flow for some Project for example.
+* `flow.useNPMPackagedFlow` (default: false) you can also run Flow by defining it in your `package.json`.
 * `flow.showStatus` (default: `true`) If `true` will display a spinner in the status-bar while flow is type checking.
 * `flow.runOnEdit` (default: `true`) If `true` will run flow on every edit, otherwise will run only when changes are saved.
 * `flow.runOnAllFiles` (default: `false`) Run Flow on all files, No need to put `//@flow comment` on top of files.
