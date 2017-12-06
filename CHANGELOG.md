@@ -1,5 +1,10 @@
 ### Master
 
+### 0.7.3
+
+* Improves `flow.pathToFlow` to allow passing in the workspace root `"${workspaceRoot}/node_modules/.bin/flow"`)
+  - [@rattrayalex](https://github.com/rattrayalex) [#173](https://github.com/flowtype/flow-for-vscode/pull/173)
+
 ### 0.7.2
 
 * Fixes for flow not re-checking on file changes- [@clintwood][]
