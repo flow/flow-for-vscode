@@ -2,18 +2,26 @@
 
 This extension adds [Flow](http://flowtype.org) support for VS Code. Flow is a static type checker, designed to find type errors in JavaScript programs.
 
-Want to make Flow in VS Code really shine? We're looking for [someone to take a stab at converting this project](https://github.com/flowtype/flow-for-vscode/issues/148) to use the new [flow-language-server support in flow](https://github.com/flowtype/flow-language-server). This means the core team would add features, and this extension will get them for _almost free_. If this is you, you can get [set up for developement](https://github.com/flowtype/flow-for-vscode/blob/master/CONTRIBUTING.md) easily and then contrinute to [this WIP PR](https://github.com/flowtype/flow-for-vscode/pull/150).
+<p align="center">
+  <img src="https://github.com/flowtype/flow-for-vscode/raw/master/readme/flow-main.gif"/>
+</p>
+
+Want to help make Flow in VS Code really shine? We're looking for [someone to help move this project](https://github.com/flowtype/flow-for-vscode/issues/148) to use the new [flow-language-server support in flow](https://github.com/flowtype/flow-language-server). This means the flow core team would add features, and this extension will get them for _almost free_. If this is you, you can get [set up for development](https://github.com/flowtype/flow-for-vscode/blob/master/CONTRIBUTING.md) easily and then contrinute to [this WIP PR](https://github.com/flowtype/flow-for-vscode/pull/150).
 
 ## Installation
 
-Follow the [instructions](https://code.visualstudio.com/docs/editor/extension-gallery) for VS Code extension installation and install the `Flow Language Support` extension.
+Search for "flow" in the VS Code extensions panel.
 
 ## Setup
 
 * Flow is [supported](https://github.com/facebook/flow#requirements) on Mac, 64-bit Windows, and Linux, follow [flowtype.org](http://flowtype.org/docs/getting-started.html#_) to get started
 * You need a `.flowconfig` in your workspace to enable the flow features
-* Make sure you are able to run the `flow` command from the command line ( or you have `flow.useNPMPackagedFlow` option in `true` )
-* Set workspace preference with `"javascript.validate.enable": false`.
+* Make sure you are able to run the `flow` command from the command line ( or you have `flow.useNPMPackagedFlow` option as `true` )
+* You will want to disable the TypeScript built-in extension for your project 
+
+<p align="center">
+  <img src="https://github.com/flowtype/flow-for-vscode/raw/master/readme/flow-disable-tsc.gif"/>
+</p>
 
 ## Configuration
 You can specify a configuration by amending the VS Code `settings.json` file. Access this through Preferences -> Settings. You must reload VS Code after installing this extension for these settings to take affect.
@@ -34,9 +42,12 @@ You can specify a configuration by amending the VS Code `settings.json` file. Ac
 * Hover type information
 * Toggle-able Code Coverage reports
 
+<p align="center">
+  <img src="https://github.com/flowtype/flow-for-vscode/raw/master/readme/code-coverage.gif"/>
+</p>
+
 ## Known Issues
 
-* You should set workspace preference to disable default syntax validation from Visual Studio Code: `"javascript.validate.enable": false`.
 * There are some aspects of Flow syntax which are not supported by the default VS Code JavaScript grammar, if you're having problems with syntax try [JavaScript Atom Grammar](https://marketplace.visualstudio.com/items?itemName=ms-vscode.js-atom-grammar).
 
 ## Debugger configuration
