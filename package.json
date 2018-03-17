@@ -116,7 +116,7 @@
     "semver": "^5.3.0",
     "shell-quote": "^1.6.0",
     "temp": "^0.8.3",
-    "vscode-languageclient": "^3.3.0"
+    "vscode-languageclient": "^4.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.1.4",
