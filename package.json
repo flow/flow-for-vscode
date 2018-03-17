@@ -16,7 +16,7 @@
     "onLanguage:javascriptreact",
     "onLanguage:javascript"
   ],
-  "main": "./build/flowMain",
+  "main": "./build/index.js",
   "contributes": {
     "configuration": {
       "type": "object",
@@ -51,6 +51,11 @@
           "type": "boolean",
           "default": false,
           "description": "Support using flow through your node_modules folder, WARNING: Checking this box is a security risk. When you open a project we will immediately run code contained within it."
+        },
+        "flow.useLSP": {
+          "type": "boolean",
+          "default": false,
+          "description": "Run Flow through Language Server Protocol [EXPERIMENTAL]."
         },
         "flow.runOnAllFiles": {
           "type": "boolean",
