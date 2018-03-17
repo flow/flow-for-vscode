@@ -2,6 +2,10 @@
 <PROJECT_ROOT>/node_modules/.*/spec/.*
 .*/node_modules/config-chain/test/broken.json
 
+[untyped]
+<PROJECT_ROOT>/lib/pkg/commons-node
+<PROJECT_ROOT>/lib/pkg/flow-base/lib/FlowHelpers.js
+
 [include]
 
 [libs]
@@ -10,7 +14,5 @@
 suppress_comment=.*\\$FlowFixMe.*
 suppress_comment=.*\\$FlowIssue.*
 
-unsafe.enable_getters_and_setters=true
-
 [version]
-^0.49.0
+^0.68.0
