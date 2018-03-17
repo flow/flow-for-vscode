@@ -7,9 +7,15 @@
   "engines": {
     "vscode": "^1.8.0"
   },
-  "categories": ["Languages", "Linters"],
+  "categories": [
+    "Languages",
+    "Linters"
+  ],
   "private": true,
-  "activationEvents": ["onLanguage:javascriptreact", "onLanguage:javascript"],
+  "activationEvents": [
+    "onLanguage:javascriptreact",
+    "onLanguage:javascript"
+  ],
   "main": "./build/flowMain",
   "contributes": {
     "configuration": {
@@ -34,8 +40,7 @@
         "flow.runOnEdit": {
           "type": "boolean",
           "default": true,
-          "description":
-            "If true will run flow on every edit, otherwise will run only when changes are saved"
+          "description": "If true will run flow on every edit, otherwise will run only when changes are saved"
         },
         "flow.stopFlowOnExit": {
           "type": "boolean",
@@ -45,8 +50,7 @@
         "flow.useNPMPackagedFlow": {
           "type": "boolean",
           "default": false,
-          "description":
-            "Support using flow through your node_modules folder, WARNING: Checking this box is a security risk. When you open a project we will immediately run code contained within it."
+          "description": "Support using flow through your node_modules folder, WARNING: Checking this box is a security risk. When you open a project we will immediately run code contained within it."
         },
         "flow.runOnAllFiles": {
           "type": "boolean",
@@ -55,7 +59,13 @@
         },
         "flow.fileExtensions": {
           "type": "array",
-          "default": [".js", ".mjs", ".jsx", ".flow", ".json"],
+          "default": [
+            ".js",
+            ".mjs",
+            ".jsx",
+            ".flow",
+            ".json"
+          ],
           "description": "File extensions to consider for flow processing.",
           "items": {
             "type": "string"
@@ -66,8 +76,13 @@
     "languages": [
       {
         "id": "javascript",
-        "aliases": ["JavaScript", "js"],
-        "filenamePatterns": ["*.js.flow"]
+        "aliases": [
+          "JavaScript",
+          "js"
+        ],
+        "filenamePatterns": [
+          "*.js.flow"
+        ]
       }
     ]
   },
@@ -82,7 +97,7 @@
     "elegant-spinner": "^1.0.1",
     "event-kit": "^2.0.0",
     "flow-bin": "^0.68.0",
-    "flow-language-server": "^0.1.3",
+    "flow-language-server": "^0.4.3",
     "fs-plus": "^2.8.2",
     "fuzzaldrin": "^2.1.0",
     "js-beautify": "^1.6.12",
@@ -99,12 +114,10 @@
     "vscode-languageclient": "^3.3.0"
   },
   "devDependencies": {
-    "@types/node": "^8.0.19",
     "babel-cli": "^6.1.4",
     "babel-plugin-transform-flow-strip-types": "^6.0.14",
     "babel-preset-es2015": "^6.1.4",
     "babel-preset-stage-1": "^6.1.2",
-    "typescript": "^2.4.2",
     "vscode": "0.11.x"
   },
   "icon": "flow-logo.png",
