@@ -59,7 +59,13 @@
                 },
                 "flow.fileExtensions": {
                     "type": "array",
-                    "default": [".js", ".mjs", ".jsx", ".flow", ".json"],
+                    "default": [
+                        ".js",
+                        ".mjs",
+                        ".jsx",
+                        ".flow",
+                        ".json"
+                    ],
                     "description": "File extensions to consider for flow processing.",
                     "items": {
                         "type": "string"
@@ -90,7 +96,7 @@
         "dequeue": "^1.0.5",
         "elegant-spinner": "^1.0.1",
         "event-kit": "^2.0.0",
-        "flow-bin": "^0.49.0",
+        "flow-bin": "^0.68.0",
         "fs-plus": "^2.8.2",
         "fuzzaldrin": "^2.1.0",
         "js-beautify": "^1.6.12",
