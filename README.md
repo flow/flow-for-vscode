@@ -6,7 +6,7 @@ This extension adds [Flow](http://flowtype.org) support for VS Code. Flow is a s
   <img src="https://github.com/flowtype/flow-for-vscode/raw/master/readme/flow-main.gif"/>
 </p>
 
-Want to help make Flow in VS Code really shine? We're looking for [someone to help move this project](https://github.com/flowtype/flow-for-vscode/issues/148) to use the new [flow-language-server support in flow](https://github.com/flowtype/flow-language-server). This means the flow core team would add features, and this extension will get them for _almost free_. If this is you, you can get [set up for development](https://github.com/flowtype/flow-for-vscode/blob/master/CONTRIBUTING.md) easily and then contrinute to [this WIP PR](https://github.com/flowtype/flow-for-vscode/pull/150).
+Want to help make Flow in VS Code really shine? We're looking for help on moving to the new [flow-language-server support in flow](https://github.com/flowtype/flow-language-server). This means the flow core team would add features, and this extension will get them for _almost free_. If this is you, you can get [set up for development](https://github.com/flowtype/flow-for-vscode/blob/master/CONTRIBUTING.md) easily.
 
 ## Installation
 

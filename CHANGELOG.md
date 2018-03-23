@@ -1,5 +1,12 @@
 ### Master
 
+### 0.8.0
+
+* Adds experimental support for flow langauge-server-plugin, to use it set `flow.useLSP` to true in your project/global settings
+  - [@thymikee](https://github.com/thymikee) [#150](https://github.com/flowtype/flow-for-vscode/pull/150)
+* Bump Flow to 0.68
+  - [@thymikee](https://github.com/thymikee) [#221](https://github.com/flowtype/flow-for-vscode/pull/221)
+
 ### 0.7.3
 
 * Improves `flow.pathToFlow` to allow passing in the workspace root `"${workspaceRoot}/node_modules/.bin/flow"`)
