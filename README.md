@@ -1,6 +1,6 @@
 # Flow for Visual Studio Code
 
-This extension adds [Flow](http://flowtype.org) support for VS Code. Flow is a static type checker, designed to find type errors in JavaScript programs.
+This extension adds [Flow](https://flow.org/) support for VS Code. Flow is a static type checker, designed to find type errors in JavaScript programs. Follow the official guide to [get started](https://flow.org/en/docs/getting-started/).
 
 <p align="center">
   <img src="https://github.com/flowtype/flow-for-vscode/raw/master/readme/flow-main.gif"/>
@@ -10,21 +10,19 @@ Want to help make Flow in VS Code really shine? We're looking for [someone to he
 
 ## Installation
 
-Search for "flow" in the VS Code extensions panel.
+Search for "flow" in the VS Code extensions panel or install through [the marketplace](https://marketplace.visualstudio.com/items?itemName=flowtype.flow-for-vscode).
 
 ## Setup
-
-* Flow is [supported](https://github.com/facebook/flow#requirements) on Mac, 64-bit Windows, and Linux, follow [flowtype.org](http://flowtype.org/docs/getting-started.html#_) to get started
-* You need a `.flowconfig` in your workspace to enable the flow features
-* Make sure you are able to run the `flow` command from the command line ( or you have `flow.useNPMPackagedFlow` option as `true` )
-* You will want to disable the TypeScript built-in extension for your project 
+* Make sure you have a `.flowconfig` file in your workspace.
+* Make sure you are able to run the `flow` command from the command line (or see [Configuration](#Configuration) to customize the command or use NPM packaged flow).
+* Set `javascript.validate.enable` option to `false` **or** completely disable the built-in TypeScript extension for your project (see gif below):
 
 <p align="center">
   <img src="https://github.com/flowtype/flow-for-vscode/raw/master/readme/flow-disable-tsc.gif"/>
 </p>
 
 ## Configuration
-You can specify a configuration by amending the VS Code `settings.json` file. Access this through Preferences -> Settings. You must reload VS Code after installing this extension for these settings to take affect.
+You can specify a configuration by amending the VS Code `settings.json` file. Access this through Preferences → Settings. You must reload VS Code after installing this extension for these settings to take affect.
 
 * `flow.pathToFlow` (default: 'flow') path to Flow that will be used for VSCode (eg; `"${workspaceRoot}/node_modules/.bin/flow"`). 
 * `flow.stopFlowOnExit` (default: true) stop flow server on exit from Project.
