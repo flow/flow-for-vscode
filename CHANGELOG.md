@@ -1,5 +1,10 @@
 ### Master
 
+### 0.8.1
+
+* Adds windows support for the flow langauge-server-plugin
+  - [@jbachhardie](https://github.com/jbachhardie) [#239](https://github.com/flowtype/flow-for-vscode/pull/239)
+
 ### 0.8.0
 
 * Adds experimental support for flow langauge-server-plugin, to use it set `flow.useLSP` to true in your project/global settings
