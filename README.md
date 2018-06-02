@@ -14,7 +14,7 @@ Search for "flow" in the VS Code extensions panel or install through [the market
 
 ## Setup
 * Make sure you have a `.flowconfig` file in your workspace.
-* Make sure you are able to run the `flow` command from the command line (or see [Configuration](#Configuration) to customize the command or use NPM packaged flow).
+* Make sure you are able to run the `flow` command from the command line (or see [Configuration](#configuration) to customize the command or use NPM packaged flow).
 * Set `javascript.validate.enable` option to `false` **or** completely disable the built-in TypeScript extension for your project (see gif below):
 
 <p align="center">
