@@ -37,6 +37,11 @@
           "default": true,
           "description": "If true will display flow status is the statusbar"
         },
+        "flow.showUncovered": {
+          "type": "boolean",
+          "default": false,
+          "description": "If true will show uncovered code by default"
+        },
         "flow.runOnEdit": {
           "type": "boolean",
           "default": true,
