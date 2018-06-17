@@ -94,6 +94,7 @@
   "scripts": {
     "vscode:prepublish": "babel ./lib --out-dir=./build --source-maps",
     "compile": "babel ./lib --out-dir=./build --source-maps --watch",
+    "manual_compile": "babel ./lib --out-dir=./build --source-maps",
     "test": "flow check"
   },
   "dependencies": {
