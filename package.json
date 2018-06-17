@@ -129,9 +129,9 @@
   "icon": "flow-logo.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/flowtype/flow-for-vscode.git"
+    "url": "https://github.com/stuartZhang/flow-for-vscode.git"
   },
   "bugs": {
-    "url": "https://github.com/flowtype/flow-for-vscode/issues"
+    "url": "https://github.com/stuartZhang/flow-for-vscode/issues"
   }
 }
