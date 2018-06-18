@@ -1,5 +1,9 @@
 ### Master
 
+### 0.7.5
+
+* Make the variable `${workspaceRoot}` compatible with the VSCode workspace folders.
+
 ### 0.7.3
 
 * Improves `flow.pathToFlow` to allow passing in the workspace root `"${workspaceRoot}/node_modules/.bin/flow"`)
