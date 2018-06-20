@@ -1,5 +1,9 @@
 ### Master
 
+### 0.7.8
+
+* Show the flow-check status using a spinner in the higher priority.
+
 ### 0.7.7
 
 * Serialize the flow-server operations (including startup and ping) not to launch too many flow-server processes due to the data race.
