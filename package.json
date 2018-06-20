@@ -1,6 +1,6 @@
 {
   "name": "stzhang-flow-for-vscode",
-  "version": "0.7.8",
+  "version": "0.7.9",
   "publisher": "flowtype",
   "description": "Flow support for VS Code",
   "displayName": "Flow Language Support",

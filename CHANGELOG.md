@@ -1,5 +1,9 @@
 ### Master
 
+### 0.7.9
+
+* Bug fix: TypeError: Cannot read property 'document' of undefined
+
 ### 0.7.8
 
 * Show the flow-check status using a spinner in the higher priority.
