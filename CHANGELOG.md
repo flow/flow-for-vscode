@@ -2,7 +2,7 @@
 
 ### 0.7.9
 
-* Bug fix: TypeError: Cannot read property 'document' of undefined
+* Bug fix(2): TypeError: Cannot read property 'document' of undefined
 
 ### 0.7.8
 
