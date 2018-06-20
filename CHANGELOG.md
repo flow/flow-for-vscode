@@ -1,5 +1,10 @@
 ### Master
 
+### 0.7.7
+
+* Serialize the flow-server operations (including startup and ping) not to launch too many flow-server processes due to the data race.
+* Turn on more logs for the development mode.
+
 ### 0.7.5
 
 * Make the variable `${workspaceRoot}` compatible with the VSCode workspace folders.
