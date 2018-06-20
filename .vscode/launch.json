@@ -7,9 +7,12 @@
 			"type": "extensionHost",
 			"request": "launch",
 			"runtimeExecutable": "${execPath}",
+			"env": {
+				"NODE_ENV": "development"
+			},
 			"args": [
 				"--disable-extensions",
-				"--extensionDevelopmentPath=${workspaceRoot}" 
+				"--extensionDevelopmentPath=${workspaceRoot}"
 			],
 			"stopOnEntry": false,
 			"sourceMaps": true,
