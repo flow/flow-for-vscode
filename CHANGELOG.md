@@ -1,5 +1,9 @@
 ### Master
 
+### 0.7.10
+
+* Bug fix: Avoid the flow server is started repeatedly multiple times.
+
 ### 0.7.9
 
 * Bug fix(2): TypeError: Cannot read property 'document' of undefined
