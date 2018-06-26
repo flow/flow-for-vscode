@@ -1,5 +1,9 @@
 ### Master
 
+### 0.7.11
+
+* Serialize the flow-client operations (e.g. flow status)
+
 ### 0.7.10
 
 * Bug fix: Avoid the flow server is started repeatedly multiple times.
