@@ -9,19 +9,23 @@
 // A task runner that calls a custom npm script that compiles the extension.
 {
 	"version": "0.1.0",
-
-	// we want to run npm
-	"command": "npm",
-
-	// the command is a shell script
-	"isShellCommand": true,
-
-	// show the output window only if unrecognized errors occur.
-	"showOutput": "silent",
-
-	// we run the custom script "compile" as defined in package.json
-	"args": ["run", "compile", "--loglevel", "silent"],
-
-	// Whether the babel compiler is started in watching mode
-	"isBackground": true
+	"command": "npm", // we want to run npm
+	"isShellCommand": true, // the command is a shell script
+	"suppressTaskName": true,
+	"tasks": [{
+		"taskName": "watch",
+		// show the output window only if unrecognized errors occur.
+		"showOutput": "silent",
+		// we run the custom script "compile" as defined in package.json
+		"args": ["run", "compile", "--loglevel", "silent"],
+		// Whether the babel compiler is started in watching mode
+		"isBackground": true
+	}, {
+		"taskName": "compile",
+		// show the output window only if unrecognized errors occur.
+		"showOutput": "always",
+		// we run the custom script "compile" as defined in package.json
+		"args": ["run", "manual_compile"],
+		"isBuildCommand": true
+	}]
 }

@@ -1,5 +1,30 @@
 ### Master
 
+### 0.7.11
+
+* Serialize the flow-client operations (e.g. flow status)
+
+### 0.7.10
+
+* Bug fix: Avoid the flow server is started repeatedly multiple times.
+
+### 0.7.9
+
+* Bug fix(2): TypeError: Cannot read property 'document' of undefined
+
+### 0.7.8
+
+* Show the flow-check status using a spinner in the higher priority.
+
+### 0.7.7
+
+* Serialize the flow-server operations (including startup and ping) not to launch too many flow-server processes due to the data race.
+* Turn on more logs for the development mode.
+
+### 0.7.5
+
+* Make the variable `${workspaceRoot}` compatible with the VSCode workspace folders.
+
 ### 0.7.3
 
 * Improves `flow.pathToFlow` to allow passing in the workspace root `"${workspaceRoot}/node_modules/.bin/flow"`)
