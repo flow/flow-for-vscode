@@ -1262,9 +1262,9 @@ flow-bin@^0.68.0:
   version "0.68.0"
   resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.68.0.tgz#86c2d14857d306eb2e85e274f2eebf543564f623"
 
-flow-language-server@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/flow-language-server/-/flow-language-server-0.5.0.tgz#ac73bda2b63bda3ed6d435b44cf7ac962e46625c"
+flow-language-server@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/flow-language-server/-/flow-language-server-0.6.0.tgz#b86d3abd59d228e69f16e83e5bd06c21ded5c346"
   dependencies:
     async-to-generator "1.1.0"
     event-kit "2.2.0"
