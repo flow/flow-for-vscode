@@ -1,5 +1,14 @@
 ### Master
 
+### 0.8.2
+
+* Updates for the flow langauge-server-plugin
+  - [@thymikee](https://github.com/thymikee) [#258](https://github.com/flowtype/flow-for-vscode/pull/258)
+
+
+* Add `showUncovered` config option to activate uncovered code report by default
+  - [@HugoLime](https://github.com/HugoLime) [#256](https://github.com/flowtype/flow-for-vscode/pull/150)
+
 ### 0.8.1
 
 * Adds windows support for the flow langauge-server-plugin
