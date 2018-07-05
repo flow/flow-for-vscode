@@ -29,6 +29,7 @@ You can specify a configuration by amending the VS Code `settings.json` file. Ac
 * `flow.enabled` (default: true) you can disable flow for some Project for example.
 * `flow.useNPMPackagedFlow` (default: false) you can also run Flow by defining it in your `package.json`.
 * `flow.showStatus` (default: `true`) If `true` will display a spinner in the status-bar while flow is type checking.
+* `flow.showUncovered` (default: `false`) If `true` will show uncovered code by default.
 * `flow.runOnEdit` (default: `true`) If `true` will run flow on every edit, otherwise will run only when changes are saved.
 * `flow.runOnAllFiles` (default: `false`) Run Flow on all files, No need to put `//@flow comment` on top of files.
 * `flow.useLSP` (default: `false`) Run Flow through Language Server Protocol [EXPERIMENTAL].
