@@ -1,6 +1,6 @@
 ### Master
 
-### 0.8.3
+### 0.8.4
 
 * A potential fix for killing flow processes
   - [@FDiskas](https://github.com/FDiskas) [#269](https://github.com/flowtype/flow-for-vscode/pull/269)
@@ -13,18 +13,17 @@
 * Updates for the flow language-server-plugin
   - [@thymikee](https://github.com/thymikee) [#258](https://github.com/flowtype/flow-for-vscode/pull/258)
 
-
 * Add `showUncovered` config option to activate uncovered code report by default
   - [@HugoLime](https://github.com/HugoLime) [#256](https://github.com/flowtype/flow-for-vscode/pull/150)
 
 ### 0.8.1
 
-* Adds windows support for the flow langauge-server-plugin
+* Adds windows support for the flow language-server-plugin
   - [@jbachhardie](https://github.com/jbachhardie) [#239](https://github.com/flowtype/flow-for-vscode/pull/239)
 
 ### 0.8.0
 
-* Adds experimental support for flow langauge-server-plugin, to use it set `flow.useLSP` to true in your project/global settings
+* Adds experimental support for flow language-server-plugin, to use it set `flow.useLSP` to true in your project/global settings
   - [@thymikee](https://github.com/thymikee) [#150](https://github.com/flowtype/flow-for-vscode/pull/150)
 * Bump Flow to 0.68
   - [@thymikee](https://github.com/thymikee) [#221](https://github.com/flowtype/flow-for-vscode/pull/221)
