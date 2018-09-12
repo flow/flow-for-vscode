@@ -1,14 +1,15 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-	"files.exclude": {
-		// "build": true, // set this to true to hide the "build" folder with the compiled JS files,
-		"npm-debug.log*": true
-	},
-	"search.exclude": {
-		"build": true
-	},
+  "files.exclude": {
+    // "build": true, // set this to true to hide the "build" folder with the compiled JS files,
+    "npm-debug.log*": true
+  },
+  "search.exclude": {
+    "build": true
+  },
 
-	// Disable any JS validation to not interfer with Flow
-	"javascript.validate.enable": false,
-	"prettier.printWidth": 100
+  // Disable any JS validation to not interfer with Flow
+  "javascript.validate.enable": false,
+	"prettier.printWidth": 100,
+	"flow.useNPMPackagedFlow": true
 }
