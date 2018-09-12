@@ -10,6 +10,6 @@
 
   // Disable any JS validation to not interfer with Flow
   "javascript.validate.enable": false,
-	"prettier.printWidth": 100,
-	"flow.useNPMPackagedFlow": true
+  "prettier.printWidth": 100,
+  "flow.useNPMPackagedFlow": true
 }
