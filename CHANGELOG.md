@@ -1,8 +1,16 @@
 ### Master
 
+### 0.8.3
+
+* A potential fix for killing flow processes
+  - [@FDiskas](https://github.com/FDiskas) [#269](https://github.com/flowtype/flow-for-vscode/pull/269)
+
+* Fix go to definition for namespaced imports
+  - [@minedeljkovic](https://github.com/minedeljkovic) [#265](https://github.com/flowtype/flow-for-vscode/pull/265)
+
 ### 0.8.2
 
-* Updates for the flow langauge-server-plugin
+* Updates for the flow language-server-plugin
   - [@thymikee](https://github.com/thymikee) [#258](https://github.com/flowtype/flow-for-vscode/pull/258)
 
 
