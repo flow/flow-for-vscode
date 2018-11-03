@@ -89,8 +89,7 @@
     "scripts": {
         "vscode:prepublish": "babel ./lib --out-dir=./build --source-maps",
         "compile": "babel ./lib --out-dir=./build --source-maps --watch",
-        "test": "flow check",
-        "postinstall": "opencollective postinstall"
+        "test": "flow check"
     },
     "dependencies": {
         "cross-spawn": "^4.0.0",
@@ -105,7 +104,6 @@
         "log4js": "^0.6.37",
         "lru-cache": "^4.0.1",
         "mkdirp": "^0.5.1",
-        "opencollective": "^1.0.3",
         "regenerator-runtime": "^0.9.5",
         "rimraf": "^2.5.4",
         "rxjs": "^5.0.0-beta.8",
@@ -127,9 +125,5 @@
     },
     "bugs": {
         "url": "https://github.com/flowtype/flow-for-vscode/issues"
-    },
-    "collective": {
-        "type": "opencollective",
-        "url": "https://opencollective.com/flow-for-vscode"
     }
 }
