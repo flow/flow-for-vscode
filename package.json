@@ -59,13 +59,7 @@
                 },
                 "flow.fileExtensions": {
                     "type": "array",
-                    "default": [
-                        ".js",
-                        ".mjs",
-                        ".jsx",
-                        ".flow",
-                        ".json"
-                    ],
+                    "default": [".js", ".mjs", ".jsx", ".flow", ".json"],
                     "description": "File extensions to consider for flow processing.",
                     "items": {
                         "type": "string"
