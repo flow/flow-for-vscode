@@ -1,4 +1,6 @@
 # Flow for Visual Studio Code
+[![Backers on Open Collective](https://opencollective.com/flow-for-vscode/backers/badge.svg)](#backers)
+ [![Sponsors on Open Collective](https://opencollective.com/flow-for-vscode/sponsors/badge.svg)](#sponsors) 
 
 This extension adds [Flow](https://flow.org/) support for VS Code. Flow is a static type checker, designed to find type errors in JavaScript programs. Follow the official guide to [get started](https://flow.org/en/docs/getting-started/).
 
@@ -73,6 +75,36 @@ This plugin is built on top of [Nuclide](https://github.com/facebook/nuclide)'s 
 ## Contributing
 
 * please refer to [CONTRIBUTING.md](CONTRIBUTING.md)
+
+## Contributors
+
+This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
+<a href="graphs/contributors"><img src="https://opencollective.com/flow-for-vscode/contributors.svg?width=890&button=false" /></a>
+
+
+## Backers
+
+Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/flow-for-vscode#backer)]
+
+<a href="https://opencollective.com/flow-for-vscode#backers" target="_blank"><img src="https://opencollective.com/flow-for-vscode/backers.svg?width=890"></a>
+
+
+## Sponsors
+
+Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/flow-for-vscode#sponsor)]
+
+<a href="https://opencollective.com/flow-for-vscode/sponsor/0/website" target="_blank"><img src="https://opencollective.com/flow-for-vscode/sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/flow-for-vscode/sponsor/1/website" target="_blank"><img src="https://opencollective.com/flow-for-vscode/sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/flow-for-vscode/sponsor/2/website" target="_blank"><img src="https://opencollective.com/flow-for-vscode/sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/flow-for-vscode/sponsor/3/website" target="_blank"><img src="https://opencollective.com/flow-for-vscode/sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/flow-for-vscode/sponsor/4/website" target="_blank"><img src="https://opencollective.com/flow-for-vscode/sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/flow-for-vscode/sponsor/5/website" target="_blank"><img src="https://opencollective.com/flow-for-vscode/sponsor/5/avatar.svg"></a>
+<a href="https://opencollective.com/flow-for-vscode/sponsor/6/website" target="_blank"><img src="https://opencollective.com/flow-for-vscode/sponsor/6/avatar.svg"></a>
+<a href="https://opencollective.com/flow-for-vscode/sponsor/7/website" target="_blank"><img src="https://opencollective.com/flow-for-vscode/sponsor/7/avatar.svg"></a>
+<a href="https://opencollective.com/flow-for-vscode/sponsor/8/website" target="_blank"><img src="https://opencollective.com/flow-for-vscode/sponsor/8/avatar.svg"></a>
+<a href="https://opencollective.com/flow-for-vscode/sponsor/9/website" target="_blank"><img src="https://opencollective.com/flow-for-vscode/sponsor/9/avatar.svg"></a>
+
+
 
 ## License
 [See here](LICENSE)
