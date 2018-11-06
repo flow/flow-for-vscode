@@ -27,7 +27,7 @@ You can specify a configuration by amending the VS Code `settings.json` file. Ac
 * `flow.pathToFlow` (default: 'flow') path to Flow that will be used for VSCode (eg; `"${workspaceRoot}/node_modules/.bin/flow"`). 
 * `flow.stopFlowOnExit` (default: true) stop flow server on exit from Project.
 * `flow.enabled` (default: true) you can disable flow for some Project for example.
-* `flow.useNPMPackagedFlow` (default: false) you can also run Flow by defining it in your `package.json`.
+* `flow.useNPMPackagedFlow` (default: false) allows using flow from your node_modules for VSCode. **WARNING**: Setting to true is a security risk. When you open a project we will immediately run code contained within it.
 * `flow.showStatus` (default: `true`) If `true` will display a spinner in the status-bar while flow is type checking.
 * `flow.showUncovered` (default: `false`) If `true` will show uncovered code by default.
 * `flow.runOnEdit` (default: `true`) If `true` will run flow on every edit, otherwise will run only when changes are saved.
