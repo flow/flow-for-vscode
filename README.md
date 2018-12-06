@@ -12,7 +12,7 @@ Want to help make Flow in VS Code really shine? We're looking for help on moving
 
 ## Installation
 
-Search for "flow" in the VS Code extensions panel or install through [the marketplace](https://marketplace.visualstudio.com/items?itemName=flowtype.flow-for-vscode).
+Search for "Flow Language Support" in the VS Code extensions panel or install through [the marketplace](https://marketplace.visualstudio.com/items?itemName=flowtype.flow-for-vscode).
 
 ## Setup
 * Make sure you have a `.flowconfig` file in your workspace.
