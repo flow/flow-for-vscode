@@ -103,8 +103,9 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "babel ./lib --out-dir=./build --source-maps",
-    "compile": "babel ./lib --out-dir=./build --source-maps --watch --verbose",
+    "vscode:prepublish": "yarn build",
+    "compile": "yarn build --watch",
+    "build": "babel ./lib --out-dir=./build --source-maps --verbose --delete-dir-on-start",
     "test": "flow check"
   },
   "dependencies": {
