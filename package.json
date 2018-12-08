@@ -93,6 +93,12 @@
         "filenamePatterns": [
           "*.js.flow"
         ]
+      },
+      {
+        "id": "ini",
+        "filenames": [
+          ".flowconfig"
+        ]
       }
     ]
   },
