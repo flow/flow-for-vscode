@@ -15,4 +15,4 @@ suppress_comment=.*\\$FlowFixMe.*
 suppress_comment=.*\\$FlowIssue.*
 
 [version]
-^0.68.0
+^0.88.0
