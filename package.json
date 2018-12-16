@@ -113,7 +113,7 @@
     "dequeue": "^1.0.5",
     "elegant-spinner": "^1.0.1",
     "event-kit": "^2.0.0",
-    "flow-bin": "^0.68.0",
+    "flow-bin": "^0.75.0",
     "fs-plus": "^2.8.2",
     "fuzzaldrin": "^2.1.0",
     "lodash.debounce": "^4.0.8",
@@ -135,7 +135,7 @@
     "@babel/plugin-proposal-class-properties": "^7.2.1",
     "@babel/preset-env": "^7.2.0",
     "@babel/preset-flow": "^7.0.0",
-    "vscode": "0.11.x"
+    "vscode": "^1.1.21"
   },
   "icon": "flow-logo.png",
   "repository": {

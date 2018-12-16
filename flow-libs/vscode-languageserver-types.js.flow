@@ -1,0 +1,12 @@
+/* @flow */
+declare module 'vscode-languageserver-types' {
+  /**
+  * A literal to identify a text document in the client.
+  */
+  declare export interface ITextDocumentIdentifier {
+      /**
+      * The text document's uri.
+      */
+      uri: string;
+  }
+}
