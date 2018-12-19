@@ -1,0 +1,434 @@
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the license found in the LICENSE file in
+ * the root directory of this source tree.
+ *
+ * @flow
+ * @format
+ */
+
+declare module 'vscode-languageclient' {
+  import type {
+    ClientCapabilities,
+    DocumentSelector,
+    InitializeError,
+    InitializeParams,
+    MessageReader,
+    MessageWriter,
+    RequestType,
+    NotificationType,
+    ServerCapabilities,
+    RequestHandler,
+    Message,
+    NotificationHandler,
+  } from 'vscode-languageserver-protocol';
+
+  import type {
+    CancellationToken,
+    OutputChannel,
+    Event,
+    IDisposable as _IDisposable,
+    TextDocument,
+    Position as VPosition,
+    ProviderResult,
+    Hover as VHover,
+    WorkspaceFolder as VWorkspaceFolder,
+    Uri,
+  } from 'vscode';
+
+  declare export * from 'vscode-languageserver-protocol'
+  declare export * from 'vscode-languageserver-types'
+  declare export type IDisposable = _IDisposable;
+
+  import type { TextDocumentIdentifier } from 'vscode-languageserver-protocol';
+
+  declare interface c2p$URIConverter {
+    (value: Uri): string;
+  }
+  declare interface c2p$Converter {
+    asUri(uri: Uri): string;
+    asTextDocumentIdentifier(textDocument: TextDocument): TextDocumentIdentifier;
+  }
+
+  declare interface p2c$URIConverter {
+    (value: string): Uri;
+  }
+
+  declare interface p2c$Converter {
+    asUri(value: string): Uri;
+  }
+
+  // declare export type ClientCapabilities = _ClientCapbilities;
+  // declare export type ServerCapabilities = _ServerCapabilities;
+  // declare export type DocumentSelector = _DocumentSelector;
+  // declare export type TextDocumentRegistrationOptions = _TextDocumentRegistrationOptions;
+
+  declare type ExecutableOptions = {
+    cwd?: string,
+    stdio?: string | string[],
+    env?: any,
+    detached?: boolean,
+  };
+
+  declare type Executable = {
+    command: string,
+    args?: string[],
+    options?: ExecutableOptions,
+  };
+
+  declare type ForkOptions = {
+    cwd?: string,
+    env?: any,
+    encoding?: string,
+    execArgv?: string[],
+  };
+
+  declare type TransportKind = 'stdio' | 'ipc' | 'pipe';
+
+  declare type NodeModule = {
+    module: string,
+    transport?: TransportKind,
+    args?: string[],
+    runtime?: string,
+    options?: ForkOptions,
+  };
+
+  declare export type StreamInfo = {
+    writer: stream$Writable,
+    reader: stream$Readable,
+    detached?: boolean,
+  };
+
+  declare type ChildProcessInfo = {
+    process: child_process$ChildProcess,
+    detached: boolean,
+  };
+
+  declare type MessageTransports = {
+    reader: MessageReader,
+    writer: MessageWriter,
+    detached?: boolean,
+  };
+
+  declare export type ServerOptions =
+    | Executable
+    | { run: Executable, debug: Executable }
+    | { run: NodeModule, debug: NodeModule }
+    | NodeModule
+    | (() => Thenable<
+        | child_process$ChildProcess
+        | StreamInfo
+        | MessageTransports
+        | ChildProcessInfo,
+      >);
+
+  declare export interface StaticFeature {
+    /**
+     * Called to fill the initialize params.
+     *
+     * @params the initialize params.
+     */
+    fillInitializeParams?: (params: InitializeParams) => void;
+
+    /**
+     * Called to fill in the client capabilities this feature implements.
+     *
+     * @param capabilities The client capabilities to fill.
+     */
+    fillClientCapabilities(capabilities: ClientCapabilities): void;
+
+    /**
+     * Initialize the feature. This method is called on a feature instance
+     * when the client has successfully received the initalize request from
+     * the server and before the client sends the initialized notification
+     * to the server.
+     *
+     * @param capabilities the server capabilities
+     * @param documentSelector the document selector pass to the client's constuctor.
+     *  May be `undefined` if the client was created without a selector.
+     */
+    initialize(
+      capabilities: ServerCapabilities,
+      documentSelector: ?DocumentSelector,
+    ): IDisposable;
+  }
+
+  declare export interface RPCMessageType {
+    +method: string;
+    +numberOfParams: number;
+  }
+
+  declare export interface RegistrationData<T> {
+    id: string;
+    registerOptions: T;
+  }
+
+  declare export interface DynamicFeature<T> {
+    /**
+     * The message for which this features support dynamic activation / registration.
+     */
+    +messages: RPCMessageType | RPCMessageType[];
+
+    /**
+     * Called to fill the initialize params.
+     *
+     * @params the initialize params.
+     */
+    fillInitializeParams?: (params: InitializeParams) => void;
+
+    /**
+     * Called to fill in the client capabilities this feature implements.
+     *
+     * @param capabilities The client capabilities to fill.
+     */
+    fillClientCapabilities(capabilities: ClientCapabilities): void;
+
+    /**
+     * Initialize the feature. This method is called on a feature instance
+     * when the client has successfully received the initalize request from
+     * the server and before the client sends the initialized notification
+     * to the server.
+     *
+     * @param capabilities the server capabilities.
+     * @param documentSelector the document selector pass to the client's constuctor.
+     *  May be `undefined` if the client was created without a selector.
+     */
+    initialize(
+      capabilities: ServerCapabilities,
+      documentSelector: DocumentSelector | void,
+    ): void;
+
+    /**
+     * Is called when the server send a register request for the given message.
+     *
+     * @param message the message to register for.
+     * @param data additional registration data as defined in the protocol.
+     */
+    register(message: RPCMessageType, data: RegistrationData<T>): void;
+
+    /**
+     * Is called when the server wants to unregister a feature.
+     *
+     * @param id the id used when registering the feature.
+     */
+    unregister(id: string): void;
+
+    /**
+     * Called when the client is stopped to dispose this feature. Usually a feature
+     * unregisters listeners registerd hooked up with the VS Code extension host.
+     */
+    dispose(): void;
+  }
+
+  declare export interface HandleDiagnosticsSignature {
+    (uri: any, diagnostics: any[]): void;
+  }
+
+  declare export interface ProvideHoverSignature {
+    (
+      document: TextDocument,
+      position: VPosition,
+      token: CancellationToken,
+    ): ProviderResult<VHover>;
+  }
+
+  // declare export interface Middleware {
+  //   provideHover?: (uri: any, diagnostics: any[], next: HandleDiagnosticsSignature) => void;
+  //   handleDiagnostics?: (uri: any, diagnostics: any[], next: HandleDiagnosticsSignature) => void;
+  // }
+
+  declare export interface Middleware {
+    // didOpen?: NextSignature<TextDocument, void>;
+    // didChange?: NextSignature<TextDocumentChangeEvent, void>;
+    // willSave?: NextSignature<TextDocumentWillSaveEvent, void>;
+    // willSaveWaitUntil?: NextSignature<TextDocumentWillSaveEvent, Thenable<VTextEdit[]>>;
+    // didSave?: NextSignature<TextDocument, void>;
+    // didClose?: NextSignature<TextDocument, void>;
+
+    // handleDiagnostics?: (uri: Uri, diagnostics: VDiagnostic[], next: HandleDiagnosticsSignature) => void;
+    // provideCompletionItem?: (document: TextDocument, position: VPosition, context: VCompletionContext, token: CancellationToken, next: ProvideCompletionItemsSignature) => ProviderResult<VCompletionItem[] | VCompletionList>;
+    // resolveCompletionItem?: (item: VCompletionItem, token: CancellationToken, next: ResolveCompletionItemSignature) => ProviderResult<VCompletionItem>;
+    provideHover?: (
+      document: TextDocument,
+      position: VPosition,
+      token: CancellationToken,
+      next: ProvideHoverSignature,
+    ) => ProviderResult<VHover>;
+    // provideSignatureHelp?: (document: TextDocument, position: VPosition, token: CancellationToken, next: ProvideSignatureHelpSignature) => ProviderResult<VSignatureHelp>;
+    // provideDefinition?: (document: TextDocument, position: VPosition, token: CancellationToken, next: ProvideDefinitionSignature) => ProviderResult<VDefinition>;
+    // provideReferences?: (document: TextDocument, position: VPosition, options: { includeDeclaration: boolean; }, token: CancellationToken, next: ProvideReferencesSignature) => ProviderResult<VLocation[]>;
+    // provideDocumentHighlights?: (document: TextDocument, position: VPosition, token: CancellationToken, next: ProvideDocumentHighlightsSignature) => ProviderResult<VDocumentHighlight[]>;
+    // provideDocumentSymbols?: (document: TextDocument, token: CancellationToken, next: ProvideDocumentSymbolsSignature) => ProviderResult<VSymbolInformation[] | VDocumentSymbol[]>;
+    // provideWorkspaceSymbols?: (query: string, token: CancellationToken, next: ProvideWorkspaceSymbolsSignature) => ProviderResult<VSymbolInformation[]>;
+    // provideCodeActions?: (document: TextDocument, range: VRange, context: VCodeActionContext, token: CancellationToken, next: ProvideCodeActionsSignature) => ProviderResult<(VCommand | VCodeAction)[]>;
+    // provideCodeLenses?: (document: TextDocument, token: CancellationToken, next: ProvideCodeLensesSignature) => ProviderResult<VCodeLens[]>;
+    // resolveCodeLens?: (codeLens: VCodeLens, token: CancellationToken, next: ResolveCodeLensSignature) => ProviderResult<VCodeLens>;
+    // provideDocumentFormattingEdits?: (document: TextDocument, options: VFormattingOptions, token: CancellationToken, next: ProvideDocumentFormattingEditsSignature) => ProviderResult<VTextEdit[]>;
+    // provideDocumentRangeFormattingEdits?: (document: TextDocument, range: VRange, options: VFormattingOptions, token: CancellationToken, next: ProvideDocumentRangeFormattingEditsSignature) => ProviderResult<VTextEdit[]>;
+    // provideOnTypeFormattingEdits?: (document: TextDocument, position: VPosition, ch: string, options: VFormattingOptions, token: CancellationToken, next: ProvideOnTypeFormattingEditsSignature) => ProviderResult<VTextEdit[]>;
+    // provideRenameEdits?: (document: TextDocument, position: VPosition, newName: string, token: CancellationToken, next: ProvideRenameEditsSignature) => ProviderResult<VWorkspaceEdit>;
+    // prepareRename?: (document: TextDocument, position: VPosition, token: CancellationToken, next: PrepareRenameSignature) => ProviderResult<VRange | { range: VRange, placeholder: string }>;
+    // provideDocumentLinks?: (document: TextDocument, token: CancellationToken, next: ProvideDocumentLinksSignature) => ProviderResult<VDocumentLink[]>;
+    // resolveDocumentLink?: (link: VDocumentLink, token: CancellationToken, next: ResolveDocumentLinkSignature) => ProviderResult<VDocumentLink>;
+    // workspace?: WorkspaceMiddleware;
+  }
+
+  /**
+   * A pluggable error handler that is invoked when the connection is either
+   * producing errors or got closed.
+   */
+  declare export interface ErrorHandler {
+    /**
+     * An error has occurred while writing or reading from the connection.
+     *
+     * @param error - the error received
+     * @param message - the message to be delivered to the server if know.
+     * @param count - a count indicating how often an error is received. Will
+     *  be reset if a message got successfully send or received.
+     */
+    error(error: Error, message: Message, count: number): $Values<typeof ErrorAction>;
+
+    /**
+     * The connection to the server got closed.
+     */
+    closed(): $Values<typeof CloseAction>;
+  }
+
+  declare export type LanguageClientOptions = {
+    documentSelector?: DocumentSelector,
+    synchronize?: any,
+    diagnosticCollectionName?: string,
+    outputChannel?: OutputChannel,
+    outputChannelName?: string,
+    revealOutputChannelOn?: typeof RevealOutputChannelOn,
+    /**
+     * The encoding use to read stdout and stderr. Defaults
+     * to 'utf8' if ommitted.
+     */
+    stdioEncoding?: string,
+    initializationOptions?: any,
+    initializationFailedHandler?: (error: any) => boolean,
+    errorHandler?: ErrorHandler,
+    middleware?: Middleware,
+    uriConverters?: {
+      code2Protocol: c2p$URIConverter,
+      protocol2Code: p2c$URIConverter,
+    },
+    workspaceFolder?: VWorkspaceFolder,
+  };
+
+  declare export var ErrorAction: {
+    /**
+     * Continue running the server.
+     */
+    Continue: 1,
+    /**
+     * Shutdown the server.
+     */
+    Shutdown: 2,
+  };
+
+  declare export var CloseAction: {
+    /**
+     * Don't restart the server. The connection stays closed.
+     */
+    DoNotRestart: 1,
+    /**
+     * Restart the server.
+     */
+    Restart: 2,
+  };
+
+  declare export var RevealOutputChannelOn: {
+    Info: 1,
+    Warn: 2,
+    Error: 3,
+    Never: 4,
+  };
+
+  declare export var State: {
+    Stopped: 1,
+    Starting: 3,
+    Running: 2,
+  };
+
+  declare export interface StateChangeEvent {
+    oldState: number;
+    newState: number;
+  }
+
+  declare export class TextDocumentFeature<T> implements DynamicFeature<T> {
+    _client: LanguageClient;
+    _providers: Map<string, IDisposable>;
+    messages: RPCMessageType;
+    constructor(_client: LanguageClient, _message: RPCMessageType): this;
+    fillClientCapabilities(capabilities: ClientCapabilities): void;
+    initialize(
+      capabilities: ServerCapabilities,
+      documentSelector: ?DocumentSelector,
+    ): void;
+    register(message: RPCMessageType, data: RegistrationData<T>): void;
+    registerLanguageProvider(options: T): IDisposable;
+    unregister(id: string): void;
+    dispose(): void;
+  }
+
+  declare export class LanguageClient {
+    get clientOptions(): LanguageClientOptions;
+    get outputChannel(): OutputChannel;
+    constructor(
+      name: string,
+      serverOptions: ServerOptions,
+      clientOptions: LanguageClientOptions,
+      forceDebug?: boolean,
+    ): void;
+    constructor(
+      id: string,
+      name: string,
+      serverOptions: ServerOptions,
+      clientOptions: LanguageClientOptions,
+      forceDebug?: boolean,
+    ): void;
+    constructor(
+      arg1: string,
+      arg2: ServerOptions | string,
+      arg3: LanguageClientOptions | ServerOptions,
+      arg4?: boolean | LanguageClientOptions,
+      arg5?: boolean,
+    ): void;
+
+    +protocol2CodeConverter: p2c$Converter;
+    +code2ProtocolConverter: c2p$Converter;
+
+    info(message: string, data?: any): void;
+    warn(message: string, data?: any): void;
+    error(message: string, data?: any): void;
+    logFailedRequest(type: RPCMessageType, error: any): void;
+    createDefaultErrorHandler(): ErrorHandler;
+
+    start(): IDisposable;
+    stop(): Thenable<void>;
+    onReady(): Thenable<void>;
+    registerFeature(feature: StaticFeature | DynamicFeature<any>): void;
+    +onDidChangeState: Event<StateChangeEvent>;
+
+    onNotification<P, RO>(type: NotificationType<P, RO>, handler: NotificationHandler<P>): void;
+
+    // onRequest<R, E, RO>(type: RequestType0<R, E, RO>, handler: RequestHandler0<R, E>): void;
+    onRequest<P, R, E, RO>(
+      type: RequestType<P, R, E, RO>,
+      handler: RequestHandler<P, R, E>,
+    ): void;
+    // onRequest<R, E>(method: string, handler: GenericRequestHandler<R, E>): void;
+    // onRequest<R, E>(type: string | RPCMessageType, handler: GenericRequestHandler<R, E>): void;
+
+    sendRequest<R>(method: string, param: any): Thenable<R>;
+    sendRequest<P, R, E, RO>(
+      type: RequestType<P, R, E, RO>,
+      params: P,
+      token?: CancellationToken,
+    ): Thenable<R>;
+  }
+}
