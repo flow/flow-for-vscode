@@ -9,10 +9,12 @@
 [include]
 
 [libs]
+flow-libs
 
 [options]
 suppress_comment=.*\\$FlowFixMe.*
 suppress_comment=.*\\$FlowIssue.*
+suppress_comment=\\(.\\|\n\\)*\\$FlowDisableNextLine
 
 [version]
-^0.68.0
+^0.89.0

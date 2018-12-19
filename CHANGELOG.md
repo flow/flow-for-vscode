@@ -1,5 +1,10 @@
 ### Master
 
+### 1.0.0
+
+* Converts Flow LSP support to be default, and moves to using the flow-lsp module as the base:
+  - [@Mayank1791989](https://github.com/Mayank1791989) [#295](https://github.com/flowtype/flow-for-vscode/pull/295)
+
 ### 0.8.4
 
 * A potential fix for killing flow processes
