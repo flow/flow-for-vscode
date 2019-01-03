@@ -1,5 +1,9 @@
 ### Master
 
+### 1.0.1
+
+Bug fix for infinite loop - [@Mayank1791989](https://github.com/Mayank1791989) [#305](https://github.com/flowtype/flow-for-vscode/pull/305)
+
 ### 1.0.0
 
 * Converts Flow LSP support to be default, and moves to using the flow-lsp module as the base:
