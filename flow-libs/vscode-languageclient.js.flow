@@ -302,7 +302,7 @@ declare module 'vscode-languageclient' {
     diagnosticCollectionName?: string,
     outputChannel?: OutputChannel,
     outputChannelName?: string,
-    revealOutputChannelOn?: typeof RevealOutputChannelOn,
+    revealOutputChannelOn?: $Values<typeof RevealOutputChannelOn>,
     /**
      * The encoding use to read stdout and stderr. Defaults
      * to 'utf8' if ommitted.
