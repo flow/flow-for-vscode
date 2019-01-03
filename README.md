@@ -34,7 +34,7 @@ You can specify a configuration by amending the VS Code `settings.json` file. Ac
 * `flow.showUncovered` (default: `false`) If `true` will show uncovered code by default.
 * `flow.runOnEdit` (default: `true`) If `true` will run flow on every edit, otherwise will run only when changes are saved.
 * `flow.runOnAllFiles` (default: `false`) Run Flow on all files, No need to put `//@flow comment` on top of files.
-* `flow.useLSP` (default: `false`) Run Flow through Language Server Protocol [EXPERIMENTAL].
+* `flow.useLSP` (default: `true`) Turn off to switch from the official Flow Language Server implementation to talking directly to flow.
 
 ## Features
 
