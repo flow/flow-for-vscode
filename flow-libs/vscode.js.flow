@@ -2,6 +2,13 @@
 // flow-typed version: b43dff3e0e/vscode_v1.1.10/flow_>=v0.28.x
 
 declare module 'vscode' {
+  /**
+  * Thenable is a common denominator between ES6 promises, Q, jquery.Deferred, WinJS.Promise,
+  * and others. This API makes no assumption about what promise libary is being used which
+  * enables reusing existing code without migrating to a specific promise implementation. Still,
+  * we recommend the use of native promises which are available in this editor.
+  */
+  declare type Thenable<R> = Promise<R>;
 
   /**
    * The version of the editor.
@@ -1334,7 +1341,7 @@ declare module 'vscode' {
     /**
      * Dispose this object.
      */
-    dispose(): any;
+    dispose(): void;
   }
 
   /**
@@ -1475,7 +1482,7 @@ declare module 'vscode' {
     /**
      * A human readable string which is rendered less prominent.
      */
-    description: string;
+    description?: string;
 
     /**
      * A human readable string which is rendered less prominent.
@@ -5188,18 +5195,18 @@ declare module 'vscode' {
   /**
    * An event describing a transactional [document](#TextDocument) change.
    */
-  declare export interface TextDocumentChangeEvent {
+  declare export type TextDocumentChangeEvent = {
 
     /**
      * The affected document.
      */
-    document: TextDocument;
+    document: TextDocument,
 
     /**
      * An array of content changes.
      */
-    contentChanges: TextDocumentContentChangeEvent[];
-  }
+    contentChanges: TextDocumentContentChangeEvent[],
+  };
 
   /**
    * Represents reasons why a text document is saved.
@@ -7250,11 +7257,3 @@ declare module 'vscode' {
   /* END PROPOSED *********************************************************************************/
 
 }
-
-/**
- * Thenable is a common denominator between ES6 promises, Q, jquery.Deferred, WinJS.Promise,
- * and others. This API makes no assumption about what promise libary is being used which
- * enables reusing existing code without migrating to a specific promise implementation. Still,
- * we recommend the use of native promises which are available in this editor.
- */
-declare type Thenable<R> = Promise<R>;

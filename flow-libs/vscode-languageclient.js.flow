@@ -10,6 +10,8 @@
  */
 
 declare module 'vscode-languageclient' {
+  declare type Thenable<R> = Promise<R>;
+
   import type {
     ClientCapabilities,
     DocumentSelector,
@@ -32,10 +34,21 @@ declare module 'vscode-languageclient' {
     IDisposable as _IDisposable,
     TextDocument,
     Position as VPosition,
+    Location as VLocation,
+    Definition as VDefinition,
+    CompletionContext as VCompletionContext,
+    CompletionList as VCompletionList,
+    CompletionItem as VCompletionItem,
+    SignatureHelp as VSignatureHelp,
+    DocumentHighlight as VDocumentHighlight,
+    SymbolInformation as VSymbolInformation,
+    WorkspaceEdit as VWorkspaceEdit,
+    Range as VRange,
     ProviderResult,
     Hover as VHover,
     WorkspaceFolder as VWorkspaceFolder,
     Uri,
+    TextDocumentChangeEvent,
   } from 'vscode';
 
   declare export * from 'vscode-languageserver-protocol'
@@ -234,46 +247,141 @@ declare module 'vscode-languageclient' {
     ): ProviderResult<VHover>;
   }
 
-  // declare export interface Middleware {
-  //   provideHover?: (uri: any, diagnostics: any[], next: HandleDiagnosticsSignature) => void;
-  //   handleDiagnostics?: (uri: any, diagnostics: any[], next: HandleDiagnosticsSignature) => void;
-  // }
+  declare type NextSignature<P, R> = (data: P, next: (data: P) => R) => R;
+  declare export type ProvideReferencesSignature = (
+    document: TextDocument,
+    position: VPosition,
+    options: { includeDeclaration: boolean; },
+    token: CancellationToken
+  ) => ProviderResult<VLocation[]>;
+  declare export type ProvideDefinitionSignature = (
+    document: TextDocument,
+    position: VPosition,
+    token: CancellationToken
+  ) => ProviderResult<VDefinition>;
+  declare export type ProvideCompletionItemsSignature = (
+    document: TextDocument,
+    position: VPosition,
+    context: VCompletionContext,
+    token: CancellationToken
+  ) => ProviderResult<VCompletionItem[] | VCompletionList>;
+  declare export type ProvideSignatureHelpSignature = (
+    document: TextDocument,
+    position: VPosition,
+    token: CancellationToken
+  ) => ProviderResult<VSignatureHelp>;
+  declare export type ProvideDocumentHighlightsSignature = (
+    document: TextDocument,
+    position: VPosition,
+    token: CancellationToken
+  ) => ProviderResult<VDocumentHighlight[]>;
+  declare export type ProvideDocumentSymbolsSignature = (
+    document: TextDocument,
+    token: CancellationToken
+  ) => ProviderResult<VSymbolInformation[]>;
+  declare export type ProvideWorkspaceSymbolsSignature = (
+    query: string,
+    token: CancellationToken
+  ) => ProviderResult<VSymbolInformation[]>;
+  declare export type ProvideRenameEditsSignature = (
+    document: TextDocument,
+    position: VPosition,
+    newName: string,
+    token: CancellationToken
+  ) => ProviderResult<VWorkspaceEdit>;
+  declare export type PrepareRenameSignature = (
+    document: TextDocument,
+    position: VPosition,
+    token: CancellationToken
+  ) => ProviderResult<VRange | { range: VRange; placeholder: string; }>;
 
-  declare export interface Middleware {
-    // didOpen?: NextSignature<TextDocument, void>;
-    // didChange?: NextSignature<TextDocumentChangeEvent, void>;
+  declare export type Middleware = {
+    didOpen?: NextSignature<TextDocument, void>,
+    didChange?: NextSignature<TextDocumentChangeEvent, void>;
     // willSave?: NextSignature<TextDocumentWillSaveEvent, void>;
     // willSaveWaitUntil?: NextSignature<TextDocumentWillSaveEvent, Thenable<VTextEdit[]>>;
-    // didSave?: NextSignature<TextDocument, void>;
-    // didClose?: NextSignature<TextDocument, void>;
+    didSave?: NextSignature<TextDocument, void>,
+    didClose?: NextSignature<TextDocument, void>,
 
     // handleDiagnostics?: (uri: Uri, diagnostics: VDiagnostic[], next: HandleDiagnosticsSignature) => void;
-    // provideCompletionItem?: (document: TextDocument, position: VPosition, context: VCompletionContext, token: CancellationToken, next: ProvideCompletionItemsSignature) => ProviderResult<VCompletionItem[] | VCompletionList>;
+    provideCompletionItem?: (
+      document: TextDocument,
+      position: VPosition,
+      context: VCompletionContext,
+      token: CancellationToken,
+      next: ProvideCompletionItemsSignature
+    ) => ProviderResult<VCompletionItem[] | VCompletionList>;
     // resolveCompletionItem?: (item: VCompletionItem, token: CancellationToken, next: ResolveCompletionItemSignature) => ProviderResult<VCompletionItem>;
     provideHover?: (
       document: TextDocument,
       position: VPosition,
       token: CancellationToken,
       next: ProvideHoverSignature,
-    ) => ProviderResult<VHover>;
-    // provideSignatureHelp?: (document: TextDocument, position: VPosition, token: CancellationToken, next: ProvideSignatureHelpSignature) => ProviderResult<VSignatureHelp>;
-    // provideDefinition?: (document: TextDocument, position: VPosition, token: CancellationToken, next: ProvideDefinitionSignature) => ProviderResult<VDefinition>;
-    // provideReferences?: (document: TextDocument, position: VPosition, options: { includeDeclaration: boolean; }, token: CancellationToken, next: ProvideReferencesSignature) => ProviderResult<VLocation[]>;
-    // provideDocumentHighlights?: (document: TextDocument, position: VPosition, token: CancellationToken, next: ProvideDocumentHighlightsSignature) => ProviderResult<VDocumentHighlight[]>;
-    // provideDocumentSymbols?: (document: TextDocument, token: CancellationToken, next: ProvideDocumentSymbolsSignature) => ProviderResult<VSymbolInformation[] | VDocumentSymbol[]>;
-    // provideWorkspaceSymbols?: (query: string, token: CancellationToken, next: ProvideWorkspaceSymbolsSignature) => ProviderResult<VSymbolInformation[]>;
+    ) => ProviderResult<VHover>,
+
+    provideSignatureHelp?: (
+      document: TextDocument,
+      position: VPosition,
+      token: CancellationToken,
+      next: ProvideSignatureHelpSignature
+    ) => ProviderResult<VSignatureHelp>;
+
+    provideDefinition?: (
+      document: TextDocument,
+      position: VPosition,
+      token: CancellationToken,
+      next: ProvideDefinitionSignature
+    ) => ProviderResult<VDefinition>;
+
+    provideReferences?: (
+      document: TextDocument,
+      position: VPosition,
+      options: { includeDeclaration: boolean; },
+      token: CancellationToken,
+      next: ProvideReferencesSignature
+    ) => ProviderResult<VLocation[]>;
+
+    provideDocumentHighlights?: (
+      document: TextDocument,
+      position: VPosition,
+      token: CancellationToken,
+      next: ProvideDocumentHighlightsSignature
+    ) => ProviderResult<VDocumentHighlight[]>;
+
+    provideDocumentSymbols?: (
+      document: TextDocument,
+      token: CancellationToken,
+      next: ProvideDocumentSymbolsSignature
+    ) => ProviderResult<VSymbolInformation[]>;
+
+    provideWorkspaceSymbols?: (
+      query: string,
+      token: CancellationToken,
+      next: ProvideWorkspaceSymbolsSignature
+    ) => ProviderResult<VSymbolInformation[]>;
     // provideCodeActions?: (document: TextDocument, range: VRange, context: VCodeActionContext, token: CancellationToken, next: ProvideCodeActionsSignature) => ProviderResult<(VCommand | VCodeAction)[]>;
     // provideCodeLenses?: (document: TextDocument, token: CancellationToken, next: ProvideCodeLensesSignature) => ProviderResult<VCodeLens[]>;
     // resolveCodeLens?: (codeLens: VCodeLens, token: CancellationToken, next: ResolveCodeLensSignature) => ProviderResult<VCodeLens>;
     // provideDocumentFormattingEdits?: (document: TextDocument, options: VFormattingOptions, token: CancellationToken, next: ProvideDocumentFormattingEditsSignature) => ProviderResult<VTextEdit[]>;
     // provideDocumentRangeFormattingEdits?: (document: TextDocument, range: VRange, options: VFormattingOptions, token: CancellationToken, next: ProvideDocumentRangeFormattingEditsSignature) => ProviderResult<VTextEdit[]>;
     // provideOnTypeFormattingEdits?: (document: TextDocument, position: VPosition, ch: string, options: VFormattingOptions, token: CancellationToken, next: ProvideOnTypeFormattingEditsSignature) => ProviderResult<VTextEdit[]>;
-    // provideRenameEdits?: (document: TextDocument, position: VPosition, newName: string, token: CancellationToken, next: ProvideRenameEditsSignature) => ProviderResult<VWorkspaceEdit>;
-    // prepareRename?: (document: TextDocument, position: VPosition, token: CancellationToken, next: PrepareRenameSignature) => ProviderResult<VRange | { range: VRange, placeholder: string }>;
+    provideRenameEdits?: (
+      document: TextDocument,
+      position: VPosition,
+      newName: string,
+      token: CancellationToken,
+      next: ProvideRenameEditsSignature
+    ) => ProviderResult<VWorkspaceEdit>;
+    prepareRename?: (
+      document: TextDocument,
+      position: VPosition,
+      token: CancellationToken,
+      next: PrepareRenameSignature
+    ) => ProviderResult<VRange | { range: VRange, placeholder: string }>;
     // provideDocumentLinks?: (document: TextDocument, token: CancellationToken, next: ProvideDocumentLinksSignature) => ProviderResult<VDocumentLink[]>;
     // resolveDocumentLink?: (link: VDocumentLink, token: CancellationToken, next: ResolveDocumentLinkSignature) => ProviderResult<VDocumentLink>;
     // workspace?: WorkspaceMiddleware;
-  }
+  };
 
   /**
    * A pluggable error handler that is invoked when the connection is either
@@ -311,7 +419,7 @@ declare module 'vscode-languageclient' {
     initializationOptions?: any,
     initializationFailedHandler?: (error: any) => boolean,
     errorHandler?: ErrorHandler,
-    middleware?: Middleware,
+    +middleware?: Middleware,
     uriConverters?: {
       code2Protocol: c2p$URIConverter,
       protocol2Code: p2c$URIConverter,
@@ -360,7 +468,7 @@ declare module 'vscode-languageclient' {
   }
 
   declare export class TextDocumentFeature<T> implements DynamicFeature<T> {
-    _client: LanguageClient;
+    +_client: LanguageClient;
     _providers: Map<string, IDisposable>;
     messages: RPCMessageType;
     constructor(_client: LanguageClient, _message: RPCMessageType): this;
@@ -376,7 +484,8 @@ declare module 'vscode-languageclient' {
   }
 
   declare export class LanguageClient {
-    get clientOptions(): LanguageClientOptions;
+    _clientOptions: LanguageClientOptions;
+    +clientOptions: LanguageClientOptions;
     get outputChannel(): OutputChannel;
     constructor(
       name: string,
@@ -412,6 +521,7 @@ declare module 'vscode-languageclient' {
     stop(): Thenable<void>;
     onReady(): Thenable<void>;
     registerFeature(feature: StaticFeature | DynamicFeature<any>): void;
+    registerBuiltinFeatures(): void;
     +onDidChangeState: Event<StateChangeEvent>;
 
     onNotification<P, RO>(type: NotificationType<P, RO>, handler: NotificationHandler<P>): void;
