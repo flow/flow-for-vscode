@@ -1,6 +1,7 @@
 [ignore]
 <PROJECT_ROOT>/node_modules/.*/spec/.*
 .*/node_modules/config-chain/test/broken.json
+<PROJECT_ROOT>/build/.*
 
 [untyped]
 <PROJECT_ROOT>/lib/pkg/commons-node
