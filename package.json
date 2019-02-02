@@ -5,7 +5,7 @@
   "description": "Flow support for VS Code",
   "displayName": "Flow Language Support",
   "engines": {
-    "vscode": "^1.25.0"
+    "vscode": "^1.30.0"
   },
   "categories": [
     "Programming Languages",
@@ -127,7 +127,7 @@
     "semver": "^5.3.0",
     "shell-quote": "^1.6.0",
     "temp": "^0.8.3",
-    "vscode-languageclient": "^4.4.2"
+    "vscode-languageclient": "^5.2.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.0",
