@@ -200,7 +200,7 @@
     "dequeue": "^1.0.5",
     "elegant-spinner": "^1.0.1",
     "event-kit": "^2.0.0",
-    "flow-bin": "^0.92.0",
+    "flow-bin": "^0.93.0",
     "fs-plus": "^2.8.2",
     "fuzzaldrin": "^2.1.0",
     "lodash.debounce": "^4.0.8",
