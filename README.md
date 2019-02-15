@@ -52,6 +52,10 @@ You can specify a configuration by amending the VS Code `settings.json` file. Ac
 
   > **Note:** Only supported when useLSP: true.
 
+* `flow.lazyMode` (default: null): to support flow [lazyMode](https://flow.org/en/docs/lang/lazy-modes/)
+
+  > **Note:** Only supported when useLSP: true.
+
 * `flow.stopFlowOnExit` (default: true) stop flow server on exit from Project.
 
 * `flow.runOnEdit` (default: true) If `true` will run flow on every edit, otherwise will run only when changes are saved.

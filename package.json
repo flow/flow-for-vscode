@@ -65,6 +65,12 @@
           "default": "info",
           "description": "Type coverage diagnostic severity"
         },
+        "flow.lazyMode": {
+          "scope": "resource",
+          "type": "string",
+          "default": null,
+          "description": "Set value to enable flow lazy mode"
+        },
         "flow.stopFlowOnExit": {
           "scope": "resource",
           "type": "boolean",
