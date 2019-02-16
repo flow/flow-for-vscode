@@ -72,6 +72,8 @@ You can specify a configuration by amending the VS Code `settings.json` file. Ac
 
 * `flow.useLSP` (default: true) Turn off to switch from the official Flow Language Server implementation to talking directly to flow.
 
+  > **Note**: useLSP: true requires `flow >= 0.75`
+
 * `flow.enabled` (default: true) you can disable flow for some Project for example.
 
 ## Features
