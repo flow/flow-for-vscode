@@ -26,7 +26,7 @@ Search for "Flow Language Support" in the VS Code extensions panel or install th
 ## Configuration
 You can specify a configuration by amending the VS Code `settings.json` file. Access this through Preferences → Settings. You must reload VS Code after installing this extension for these settings to take affect.
 
-* `flow.pathToFlow` (default: 'flow') path to Flow that will be used for VSCode (eg; `"${workspaceRoot}/node_modules/.bin/flow"`). 
+* `flow.pathToFlow` (default: 'flow') path to Flow that will be used for VSCode (eg; `"${workspaceFolder}/node_modules/.bin/flow"`). 
 * `flow.stopFlowOnExit` (default: true) stop flow server on exit from Project.
 * `flow.enabled` (default: true) you can disable flow for some Project for example.
 * `flow.useNPMPackagedFlow` (default: false) allows using flow from your node_modules for VSCode. **WARNING**: Setting to true is a security risk. When you open a project we will immediately run code contained within it.
