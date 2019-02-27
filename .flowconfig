@@ -1,10 +1,11 @@
 [ignore]
 <PROJECT_ROOT>/node_modules/.*/spec/.*
 .*/node_modules/config-chain/test/broken.json
+<PROJECT_ROOT>/build/.*
 
 [untyped]
-<PROJECT_ROOT>/lib/pkg/commons-node
-<PROJECT_ROOT>/lib/pkg/flow-base/lib/FlowHelpers.js
+<PROJECT_ROOT>/lib/flowNonLSP/pkg/commons-node
+<PROJECT_ROOT>/lib/flowNonLSP/pkg/flow-base/lib/FlowHelpers.js
 
 [include]
 
@@ -17,4 +18,4 @@ suppress_comment=.*\\$FlowIssue.*
 suppress_comment=\\(.\\|\n\\)*\\$FlowDisableNextLine
 
 [version]
-^0.89.0
+^0.93.0

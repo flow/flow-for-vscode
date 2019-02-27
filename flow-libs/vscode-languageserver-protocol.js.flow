@@ -22,11 +22,14 @@ declare module 'vscode-languageserver-protocol' {
     RequestType as _RequestType,
     NotificationType as _NotificationType,
   } from 'vscode-jsonrpc';
+
   import type {
     RequestHandler as _RequestHandler,
     NotificationHandler as _NotificationHandler,
     Message as _Message,
   } from 'vscode-jsonrpc';
+
+  import type { GlobPattern } from 'vscode';
 
   declare export var RequestType: _RequestType;
   declare export var NotificationType: _NotificationType;
@@ -56,30 +59,30 @@ declare module 'vscode-languageserver-protocol' {
   };
 
   declare export type DocumentFilter =
-    | {
+    | {|
         /** A language id, like `typescript`. */
         language: string,
         /** A Uri [scheme](#Uri.scheme), like `file` or `untitled`. */
         scheme?: string,
         /** A glob pattern, like `*.{ts,js}`. */
-        pattern?: string
-      }
-    | {
+        pattern?: GlobPattern,
+      |}
+    | {|
         /** A language id, like `typescript`. */
         language?: string,
         /** A Uri [scheme](#Uri.scheme), like `file` or `untitled`. */
         scheme: string,
         /** A glob pattern, like `*.{ts,js}`. */
-        pattern?: string
-      }
-    | {
+        pattern?: GlobPattern
+      |}
+    | {|
         /** A language id, like `typescript`. */
         language?: string,
         /** A Uri [scheme](#Uri.scheme), like `file` or `untitled`. */
         scheme?: string,
         /** A glob pattern, like `*.{ts,js}`. */
-        pattern: string
-      };
+        pattern: GlobPattern,
+      |};
 
   declare export type DocumentSelector = Array<DocumentFilter | string>;
 
