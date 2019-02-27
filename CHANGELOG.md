@@ -1,5 +1,9 @@
 ### Master
 
+### 1.1.0
+
+Multiple config and multi-root workspace support - [@Mayank1791989](https://github.com/Mayank1791989) [#315](https://github.com/flowtype/flow-for-vscode/pull/315)
+
 ### 1.0.1
 
 Bug fix for infinite loop - [@Mayank1791989](https://github.com/Mayank1791989) [#305](https://github.com/flowtype/flow-for-vscode/pull/305)
