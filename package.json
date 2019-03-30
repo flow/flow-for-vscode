@@ -16,7 +16,9 @@
   ],
   "private": true,
   "activationEvents": [
-    "*"
+    "onLanguage:javascript",
+    "onLanguage:javascriptreact",
+    "workspaceContains:**/.flowconfig"
   ],
   "main": "./build/index.js",
   "contributes": {
