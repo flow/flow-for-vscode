@@ -18,4 +18,4 @@ suppress_comment=.*\\$FlowIssue.*
 suppress_comment=\\(.\\|\n\\)*\\$FlowDisableNextLine
 
 [version]
-^0.98.1
+^0.96.0
