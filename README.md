@@ -58,6 +58,8 @@ You can specify a configuration by amending the VS Code `settings.json` file. Ac
 
 * `flow.stopFlowOnExit` (default: true) stop flow server on exit from Project.
 
+* `flow.useCodeSnippetOnFunctionSuggest` (default: true) Complete functions with their parameter signature.
+
 * `flow.runOnEdit` (default: true) If `true` will run flow on every edit, otherwise will run only when changes are saved.
 
   > **Note:** Partial support when useLSP: true will only show syntax errors.

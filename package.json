@@ -79,6 +79,12 @@
           "default": true,
           "description": "Stop Flow on Exit"
         },
+        "flow.useCodeSnippetOnFunctionSuggest": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": true,
+          "description": "Complete functions with their parameter signature."
+        },
         "flow.useLSP": {
           "scope": "window",
           "type": "boolean",
