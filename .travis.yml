@@ -1,3 +1,5 @@
 language: node_js
+
+# using same node version used in vscode
 node_js:
-  - "node"
+  - "10"
