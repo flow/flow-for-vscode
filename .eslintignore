@@ -1,3 +1,4 @@
 flow-libs
 lib/flowNonLSP
+build
 rollup.config.js
