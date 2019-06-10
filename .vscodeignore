@@ -1,9 +1,17 @@
-.vscode/**
-**/*.map
-lib/**
-flow-typed/**
-.gitignore
-.gitattributes
-.travis.yml
-.flowconfig
-npm-debug.*
+## exclude everything
+**/**
+
+## include source files ##
+!package.json
+!build
+!node_modules/flow-bin
+# only include required prettier files in plugin to reduce plugin size
+!node_modules/prettier/standalone.js
+!node_modules/prettier/parser-flow.js
+
+## include extra files ##
+!README.md
+!readme
+!CHANGELOG.md
+!LICENSE
+!flow-logo.png

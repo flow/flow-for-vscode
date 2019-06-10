@@ -14,8 +14,9 @@ module.exports = function(api) {
         '@babel/preset-env',
         {
           targets: {
-            node: '8'
-          }
+            node: '8',
+          },
+          modules: false,
         }
       ],
       '@babel/preset-flow'
