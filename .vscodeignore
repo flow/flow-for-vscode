@@ -3,7 +3,8 @@
 
 ## include source files ##
 !package.json
-!build
+# only include js files (not *.map)
+!build/*.js
 !node_modules/flow-bin
 # only include required prettier files in plugin to reduce plugin size
 !node_modules/prettier/standalone.js
