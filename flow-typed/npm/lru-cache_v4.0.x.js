@@ -1,5 +1,5 @@
-// flow-typed signature: ac5dc0012761b322fb7609d0b5f27e30
-// flow-typed version: da30fe6876/lru-cache_v4.0.x/flow_>=v0.25.0
+// flow-typed signature: e8122e7a4f68b4d1308f30161f897a61
+// flow-typed version: 2ea1923d4f/lru-cache_v4.0.x/flow_>=v0.25.0
 
 declare module "lru-cache" {
   declare type LRUCache<K, V> = {
@@ -8,7 +8,8 @@ declare module "lru-cache" {
     peek: (key: K) => V,
     del: (key: K) => void,
     reset: () => void,
-    has: (key: K) => boolean
+    has: (key: K) => boolean,
+    prune: () => void
     // TODO add the rest of the things documented at https://www.npmjs.com/package/lru-cache
   };
 
