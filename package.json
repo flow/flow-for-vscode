@@ -204,7 +204,8 @@
     "vscode:prepublish": "env NODE_ENV=production yarn build",
     "compile": "yarn build --watch",
     "build": "rm -rf build && rollup -c rollup.config.js",
-    "test": "flow check && yarn lint",
+    "test": "flow check && yarn lint && yarn testonly",
+    "testonly": "env NODE_ENV=test jest",
     "lint": "eslint lib"
   },
   "dependencies": {
@@ -235,9 +236,11 @@
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-flow": "^7.0.0",
+    "babel-jest": "24.8.0",
     "builtin-modules": "3.1.0",
     "eslint": "5.13.0",
     "eslint-plugin-playlyfe": "6.2.1",
+    "jest": "24.8.0",
     "rollup": "1.14.5",
     "rollup-plugin-babel": "4.3.2",
     "rollup-plugin-commonjs": "10.0.0",

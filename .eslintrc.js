@@ -7,6 +7,7 @@ module.exports = {
     'plugin:playlyfe/js',
     'plugin:playlyfe/flowtype',
     'plugin:playlyfe/prettier',
+    'plugin:playlyfe/testing:jest',
   ],
 
   env: {
@@ -16,5 +17,5 @@ module.exports = {
   rules: {
     'no-negated-condition': 'off',
     'no-undefined': 'off',
-  }
+  },
 };
