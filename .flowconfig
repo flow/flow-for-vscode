@@ -17,5 +17,7 @@ suppress_comment=.*\\$FlowFixMe.*
 suppress_comment=.*\\$FlowIssue.*
 suppress_comment=\\(.\\|\n\\)*\\$FlowDisableNextLine
 
+suppress_type=$FixMe
+
 [version]
-^0.100.0
+^0.101.0
