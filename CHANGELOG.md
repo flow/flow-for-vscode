@@ -1,12 +1,29 @@
 ### Master
 
-### 1.1.0
+### 1.1.3 (June 12, 2019)
 
-Multiple config and multi-root workspace support - [@Mayank1791989](https://github.com/Mayank1791989) [#315](https://github.com/flowtype/flow-for-vscode/pull/315)
+* Update bundled Flow to v0.101.0. ([@Mayank1791989](https://github.com/Mayank1791989) in [#340](https://github.com/flowtype/flow-for-vscode/pull/340))
+* Update Node, Babel, Prettier, and setup Jest for testing. ([@Mayank1791989](https://github.com/Mayank1791989) in [#340](https://github.com/flowtype/flow-for-vscode/pull/340))
+
+### 1.1.2 (June 11, 2019)
+
+* Add `useCodeSnippetOnFunctionSuggest`. ([@Mayank1791989](https://github.com/Mayank1791989) in [#337](https://github.com/flowtype/flow-for-vscode/pull/337))
+* Change `useNPMPackagedFlow` default to true. ([@Mayank1791989](https://github.com/Mayank1791989) in [#337](https://github.com/flowtype/flow-for-vscode/pull/337)) 
+* Fix bundle might be bigger than expected ([#327](https://github.com/flowtype/flow-for-vscode/issues/327)). ([@Mayank1791989](https://github.com/Mayank1791989) in [#337](https://github.com/flowtype/flow-for-vscode/pull/337)) 
+* Fix Intelllisense can't pick up functions in plain objects properly ([#335](https://github.com/flowtype/flow-for-vscode/issues/335)). ([@Mayank1791989](https://github.com/Mayank1791989) in [#337](https://github.com/flowtype/flow-for-vscode/pull/337))
+* Fix restart vs. restart client ([#323](https://github.com/flowtype/flow-for-vscode/issues/323)). ([@Mayank1791989](https://github.com/Mayank1791989) in [#337](https://github.com/flowtype/flow-for-vscode/pull/337))
+
+### 1.1.1 (March 30, 2019)
+
+* Fix extension activates even for non-Flow (and non-JS) projects. ([@Mayank1791989](https://github.com/Mayank1791989) in [#326](https://github.com/flowtype/flow-for-vscode/pull/326))
+
+### 1.1.0 (February 27, 2019)
+
+* Multiple config and multi-root workspace support - [@Mayank1791989](https://github.com/Mayank1791989) [#315](https://github.com/flowtype/flow-for-vscode/pull/315)
 
 ### 1.0.1
 
-Bug fix for infinite loop - [@Mayank1791989](https://github.com/Mayank1791989) [#305](https://github.com/flowtype/flow-for-vscode/pull/305)
+* Bug fix for infinite loop - [@Mayank1791989](https://github.com/Mayank1791989) [#305](https://github.com/flowtype/flow-for-vscode/pull/305)
 
 ### 1.0.0
 
