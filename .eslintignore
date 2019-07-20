@@ -1,4 +1,5 @@
 flow-libs
+flow-typed
 build
 rollup.config.js
 babel.config.js

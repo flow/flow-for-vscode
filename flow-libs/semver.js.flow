@@ -1,0 +1,21 @@
+/* @flow */
+declare module 'semver' {
+  declare type Options = { includePrerelease?: boolean };
+
+  declare export function satisfies(
+    version: string,
+    range: string,
+    options: ?Options,
+  ): boolean;
+
+  declare export function lte(
+    v1: string,
+    v2: string,
+    options?: Options,
+  ): boolean;
+
+  declare export default {
+    satisfies: typeof satisfies,
+    lte: typeof lte,
+  };
+}
