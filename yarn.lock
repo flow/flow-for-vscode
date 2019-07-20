@@ -1172,9 +1172,10 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
-bin-version@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/bin-version/-/bin-version-3.0.0.tgz#1a8be03f652171713b1b1ccc4b0ebea460b08818"
+bin-version@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/bin-version/-/bin-version-4.0.0.tgz#e9366b57ba83077364ecf2097a946891086a4008"
+  integrity sha512-oxhcQ8KmmZZS+nNFDw2v3VP1ztAOpKWRygBeZNVHKOQuhHNwDY6coNFo6oxxMhhmfPZMiSC8ewgTxWviFvYSyg==
   dependencies:
     execa "^1.0.0"
     find-versions "^3.0.0"
@@ -1883,9 +1884,10 @@ esutils@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.2.tgz#0abf4f1caa5bcb1f7a9d8acc6dea4faaa04bac9b"
 
-event-kit@^2.0.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/event-kit/-/event-kit-2.3.0.tgz#459ba0646d4b7dbca5d9bf2b3c4e2d0103e85e15"
+event-kit@^2.5.3:
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/event-kit/-/event-kit-2.5.3.tgz#d47e4bc116ec0aacd00263791fa1a55eb5e79ba1"
+  integrity sha512-b7Qi1JNzY4BfAYfnIRanLk0DOD1gdkWHT4GISIn8Q2tAf3LpU8SP2CMwWaq40imYoKWbtN4ZhbSRxvsnikooZQ==
 
 exec-sh@^0.3.2:
   version "0.3.2"
@@ -2088,9 +2090,10 @@ fs-minipass@^1.2.5:
   dependencies:
     minipass "^2.2.1"
 
-fs-plus@^2.8.2:
-  version "2.10.1"
-  resolved "https://registry.yarnpkg.com/fs-plus/-/fs-plus-2.10.1.tgz#3204781d7840611e6364e7b6fb058c96327c5aa5"
+fs-plus@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/fs-plus/-/fs-plus-3.1.1.tgz#02c085ba0a013084cff2f3e89b17c60c1d9b4ab5"
+  integrity sha512-Se2PJdOWXqos1qVTkvqqjb0CSnfBnwwD+pq+z4ksT+e97mEShod/hrNg0TRCCsXPbJzcIq+NuzQhigunMWMJUA==
   dependencies:
     async "^1.5.2"
     mkdirp "^0.5.1"
@@ -4323,6 +4326,11 @@ semver@^6.0.0, semver@^6.1.0:
   version "6.1.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.1.1.tgz#53f53da9b30b2103cd4f15eab3a18ecbcb210c9b"
   integrity sha512-rWYq2e5iYW+fFe/oPPtYJxYgjBm8sC4rmoGdUOgBB7VnwKt6HrL793l2voH1UlsyYZpJ4g0wfjnTEO1s1NP2eQ==
+
+semver@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-6.2.0.tgz#4d813d9590aaf8a9192693d6c85b9344de5901db"
+  integrity sha512-jdFC1VdUGT/2Scgbimf7FSx9iJLXoqfglSF+gJeuNWVpiE37OIbc1jywR/GJyFdz3mnkz2/id0L0J/cr0izR5A==
 
 serialize-javascript@^1.7.0:
   version "1.7.0"
