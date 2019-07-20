@@ -1,5 +1,18 @@
 ### Master
 
+### 1.2.0 (July 20, 2019)
+
+#### Features
+* **flow-bin:** update bundled flow to v0.103.0 ([@Mayank1791989](https://github.com/Mayank1791989) in [8d50b98](https://github.com/flowtype/flow-for-vscode/commit/8d50b98))
+
+#### Bug Fixes
+* **lsp:** fix issue [#350](https://github.com/flowtype/flow-for-vscode/issues/350) ([@Mayank1791989](https://github.com/Mayank1791989) in [ec9c9e0](https://github.com/flowtype/flow-for-vscode/commit/ec9c9e0))
+
+### 1.1.4 (June 22, 2019)
+
+* **build:** fix issue [#341](https://github.com/flowtype/flow-for-vscode/issues/341) ([@Mayank1791989](https://github.com/Mayank1791989) in [c6bacf0](https://github.com/flowtype/flow-for-vscode/commit/c6bacf0))
+* **lsp:** accept flow release candidate version ([@telaoumatenyanis](https://github.com/telaoumatenyanis) in [#344](https://github.com/flowtype/flow-for-vscode/pull/344))
+
 ### 1.1.3 (June 12, 2019)
 
 * Update bundled Flow to v0.101.0. ([@Mayank1791989](https://github.com/Mayank1791989) in [#340](https://github.com/flowtype/flow-for-vscode/pull/340))
@@ -8,8 +21,8 @@
 ### 1.1.2 (June 11, 2019)
 
 * Add `useCodeSnippetOnFunctionSuggest`. ([@Mayank1791989](https://github.com/Mayank1791989) in [#337](https://github.com/flowtype/flow-for-vscode/pull/337))
-* Change `useNPMPackagedFlow` default to true. ([@Mayank1791989](https://github.com/Mayank1791989) in [#337](https://github.com/flowtype/flow-for-vscode/pull/337)) 
-* Fix bundle might be bigger than expected ([#327](https://github.com/flowtype/flow-for-vscode/issues/327)). ([@Mayank1791989](https://github.com/Mayank1791989) in [#337](https://github.com/flowtype/flow-for-vscode/pull/337)) 
+* Change `useNPMPackagedFlow` default to true. ([@Mayank1791989](https://github.com/Mayank1791989) in [#337](https://github.com/flowtype/flow-for-vscode/pull/337))
+* Fix bundle might be bigger than expected ([#327](https://github.com/flowtype/flow-for-vscode/issues/327)). ([@Mayank1791989](https://github.com/Mayank1791989) in [#337](https://github.com/flowtype/flow-for-vscode/pull/337))
 * Fix Intelllisense can't pick up functions in plain objects properly ([#335](https://github.com/flowtype/flow-for-vscode/issues/335)). ([@Mayank1791989](https://github.com/Mayank1791989) in [#337](https://github.com/flowtype/flow-for-vscode/pull/337))
 * Fix restart vs. restart client ([#323](https://github.com/flowtype/flow-for-vscode/issues/323)). ([@Mayank1791989](https://github.com/Mayank1791989) in [#337](https://github.com/flowtype/flow-for-vscode/pull/337))
 
