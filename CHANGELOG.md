@@ -1,5 +1,15 @@
 ### Master
 
+### [1.3.0](https://github.com/flowtype/flow-for-vscode/compare/v1.2.0...v1.3.0) (2019-08-04)
+
+#### Bug Fixes
+
+* **remote:** fix plugin not working with remote extension pack on windows ([@Mayank1791989](https://github.com/Mayank1791989) in [3dd4ecc](https://github.com/flowtype/flow-for-vscode/commit/3dd4ecc)), closes [#336](https://github.com/flowtype/flow-for-vscode/issues/336)
+
+#### Features
+
+* **flow-bin:** update bundled flow to v0.104.0 ([@Mayank1791989](https://github.com/Mayank1791989) in [5c15751](https://github.com/flowtype/flow-for-vscode/commit/5c15751))
+
 ### 1.2.0 (July 20, 2019)
 
 #### Features
