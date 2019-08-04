@@ -206,7 +206,7 @@
     "build": "rm -rf build && rollup -c rollup.config.js",
     "test": "flow check && yarn lint && yarn testonly",
     "testonly": "env NODE_ENV=test jest",
-    "lint": "eslint lib"
+    "lint": "eslint lib --report-unused-disable-directives"
   },
   "dependencies": {
     "bin-version": "4.0.0",

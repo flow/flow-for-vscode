@@ -11,5 +11,9 @@
   // Disable any JS validation to not interfer with Flow
   "javascript.validate.enable": false,
 
-  "prettier.printWidth": 100
+  "prettier.printWidth": 100,
+
+  "eslint.options": {
+    "reportUnusedDisableDirectives": true,
+  },
 }
