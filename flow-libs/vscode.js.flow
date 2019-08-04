@@ -4041,6 +4041,9 @@ declare module 'vscode' {
      * Extensions must create this directory before writing to it. The parent directory will always exist.
      */
     +logDirectory: string;
+
+    // NOTE: only present in vscode >= 1.35
+    +executionContext?: 1 | 2;
     /* END PROPOSED *********************************************************************************/
   }
 
