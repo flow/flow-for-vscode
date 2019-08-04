@@ -1,5 +1,5 @@
-// flow-typed signature: ffa9df0d588bc1c160cd5599743582bf
-// flow-typed version: 4d3b3a64ab/which_v1.x.x/flow_>=v0.75.x
+// flow-typed signature: bfce188e9f98afabd4ac954d5dff4e07
+// flow-typed version: c6154227d1/which_v1.x.x/flow_>=v0.104.x
 
 declare module "which" {
   declare type Options = {|
@@ -17,6 +17,7 @@ declare module "which" {
 
   declare module.exports: {
     [[call]]: typeof whichAsync,
-    sync: typeof whichSync
+    sync: typeof whichSync,
+    ...
   }
 }
