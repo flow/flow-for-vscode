@@ -246,7 +246,8 @@
     "rollup-plugin-commonjs": "10.0.2",
     "rollup-plugin-node-resolve": "5.2.0",
     "rollup-plugin-progress": "1.1.1",
-    "rollup-plugin-terser": "5.1.1"
+    "rollup-plugin-terser": "5.1.1",
+    "vscode-uri": "2.0.3"
   },
   "icon": "flow-logo.png",
   "repository": {

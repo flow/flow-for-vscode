@@ -1,0 +1,5 @@
+/* @flow */
+declare module 'vscode-uri' {
+  import typeof { Uri } from 'vscode';
+  declare export var URI: Uri;
+}
