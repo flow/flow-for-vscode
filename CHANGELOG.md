@@ -1,4 +1,14 @@
-### Master
+# Changelog
+
+### [1.4.0](https://github.com/flowtype/flow-for-vscode/compare/v1.3.0...v1.4.0) (2019-09-02)
+
+#### Bug Fixes
+
+* **windows:** fix `flow is running on a different directory` ([@Mayank1791989](https://github.com/Mayank1791989) in [cd0831b](https://github.com/flowtype/flow-for-vscode/commit/cd0831b)), closes [#260](https://github.com/flowtype/flow-for-vscode/issues/260)
+
+#### Features
+
+* **flow-bin:** update bundled flow to v0.106.3 ([a4389fc](https://github.com/flowtype/flow-for-vscode/commit/a4389fc))
 
 ### [1.3.0](https://github.com/flowtype/flow-for-vscode/compare/v1.2.0...v1.3.0) (2019-08-04)
 

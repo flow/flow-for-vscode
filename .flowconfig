@@ -19,5 +19,7 @@ suppress_comment=\\(.\\|\n\\)*\\$FlowDisableNextLine
 
 suppress_type=$FixMe
 
+experimental.lsp.code_actions=true
+
 [version]
-^0.104.0
+^0.106.3
