@@ -1,5 +1,15 @@
 # Changelog
 
+### [1.5.0](https://github.com/flowtype/flow-for-vscode/compare/v1.1.4...v1.5.0) (2019-09-09)
+
+#### Bug Fixes
+
+* **windows:** closes [#362](https://github.com/flowtype/flow-for-vscode/issues/362) ([f1879e1](https://github.com/flowtype/flow-for-vscode/commit/f1879e1))
+
+#### Features
+
+* **flow-bin:** update bundled flow to v0.107.0 ([68f9ccf](https://github.com/flowtype/flow-for-vscode/commit/68f9ccf))
+
 ### [1.4.0](https://github.com/flowtype/flow-for-vscode/compare/v1.3.0...v1.4.0) (2019-09-02)
 
 #### Bug Fixes
