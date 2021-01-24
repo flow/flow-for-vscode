@@ -22,4 +22,4 @@ suppress_type=$FixMe
 experimental.lsp.code_actions=true
 
 [version]
-^0.107.0
+^0.122.0
