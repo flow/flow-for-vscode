@@ -4,7 +4,6 @@
 <PROJECT_ROOT>/build/.*
 
 [untyped]
-<PROJECT_ROOT>/lib/flowNonLSP/pkg/commons-node
 <PROJECT_ROOT>/lib/flowNonLSP/pkg/flow-base/lib/FlowHelpers.js
 
 [include]
@@ -13,13 +12,7 @@
 flow-libs
 
 [options]
-suppress_comment=.*\\$FlowFixMe.*
-suppress_comment=.*\\$FlowIssue.*
-suppress_comment=\\(.\\|\n\\)*\\$FlowDisableNextLine
-
 suppress_type=$FixMe
 
-experimental.lsp.code_actions=true
-
 [version]
-^0.107.0
+^0.146.0
