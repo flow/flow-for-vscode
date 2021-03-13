@@ -4666,12 +4666,7 @@ declare module 'vscode' {
     +focused: boolean;
   }
 
-  /**
-   * Namespace for dealing with the current window of the editor. That is visible
-   * and active editors, as well as, UI elements to show messages, selections, and
-   * asking for user input.
-   */
-  declare export var window: {
+  declare export interface Window{
 
     /**
      * The currently active editor or `undefined`. The active editor is the one
@@ -4794,7 +4789,18 @@ declare module 'vscode' {
      * @param items A set of items that will be rendered as actions in the message.
      * @return A thenable that resolves to the selected item or `undefined` when being dismissed.
      */
-    showInformationMessage<T: MessageItem>(message: string, options?: MessageOptions, ...items: T[]): Thenable<?T>;
+    showInformationMessage<T = MessageItem>(message: string, options?: MessageOptions, ...items: T[]): Thenable<?T>;
+
+    /**
+     * Show an information message.
+     *
+     * @see [showInformationMessage](#window.showInformationMessage)
+     *
+     * @param message The message to show.
+     * @param items A set of items that will be rendered as actions in the message.
+     * @return A thenable that resolves to the selected item or `undefined` when being dismissed.
+     */
+    showInformationMessage<T = MessageItem>(message: string, ...items: T[]): Thenable<?T>;
 
     /**
      * Show a warning message.
@@ -4818,7 +4824,18 @@ declare module 'vscode' {
      * @param items A set of items that will be rendered as actions in the message.
      * @return A thenable that resolves to the selected item or `undefined` when being dismissed.
      */
-    showWarningMessage<T: MessageItem>(message: string, options?: MessageOptions, ...items: T[]): Thenable<?T>;
+    showWarningMessage<T = MessageItem>(message: string, options?: MessageOptions, ...items: T[]): Thenable<?T>;
+
+    /**
+     * Show a warning message.
+     *
+     * @see [showInformationMessage](#window.showInformationMessage)
+     *
+     * @param message The message to show.
+     * @param items A set of items that will be rendered as actions in the message.
+     * @return A thenable that resolves to the selected item or `undefined` when being dismissed.
+     */
+    showWarningMessage<T = MessageItem>(message: string, ...items: T[]): Thenable<?T>;
 
     /**
      * Show an error message.
@@ -4842,7 +4859,18 @@ declare module 'vscode' {
      * @param items A set of items that will be rendered as actions in the message.
      * @return A thenable that resolves to the selected item or `undefined` when being dismissed.
      */
-    showErrorMessage<T: MessageItem>(message: string, options?: MessageOptions, ...items: T[]): Thenable<?T>;
+    showErrorMessage<T = MessageItem>(message: string, options?: MessageOptions, ...items: T[]): Thenable<?T>;
+
+    /**
+     * Show an error message.
+     *
+     * @see [showInformationMessage](#window.showInformationMessage)
+     *
+     * @param message The message to show.
+     * @param items A set of items that will be rendered as actions in the message.
+     * @return A thenable that resolves to the selected item or `undefined` when being dismissed.
+     */
+    showErrorMessage<T = MessageItem>(message: string, ...items: T[]): Thenable<?T>;
 
     /**
      * Shows a selection list.
@@ -4862,7 +4890,7 @@ declare module 'vscode' {
      * @param token A token that can be used to signal cancellation.
      * @return A promise that resolves to the selected item or `undefined`.
      */
-    showQuickPick<T: QuickPickItem>(items: T[] | Thenable<T[]>, options?: QuickPickOptions, token?: CancellationToken): Thenable<?T>;
+    showQuickPick<T = QuickPickItem>(items: T[] | Thenable<T[]>, options?: QuickPickOptions, token?: CancellationToken): Thenable<?T>;
 
     /**
      * Shows a selection list of [workspace folders](#workspace.workspaceFolders) to pick from.
@@ -4994,6 +5022,13 @@ declare module 'vscode' {
     registerDecorationProvider(provider: DecorationProvider): Disposable;
     /* END PROPOSED *********************************************************************************/
   }
+
+  /**
+   * Namespace for dealing with the current window of the editor. That is visible
+   * and active editors, as well as, UI elements to show messages, selections, and
+   * asking for user input.
+   */
+  declare export var window: Window;
 
   /**
    * A data provider that provides tree data

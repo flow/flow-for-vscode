@@ -1,5 +1,5 @@
-// flow-typed signature: 14e5e212dd7ed5c1db95d28a9d629409
-// flow-typed version: 94e9f7e0a4/fuzzaldrin_v2.x.x/flow_>=v0.25.x
+// flow-typed signature: e93785ee18dd58c4d2996b0b0ec61179
+// flow-typed version: c6154227d1/fuzzaldrin_v2.x.x/flow_>=v0.104.x
 
 declare module 'fuzzaldrin' {
   declare module.exports: {
@@ -7,6 +7,8 @@ declare module 'fuzzaldrin' {
     filter<T: string|Object>(candidates: Array<T>, query: string, options?: {
       key?: string,
       maxResults?: number,
+      ...
     }): Array<T>,
+    ...
   }
 }
