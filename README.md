@@ -23,11 +23,11 @@ Search for "Flow Language Support" in the VS Code extensions panel or install th
   <img src="https://github.com/flowtype/flow-for-vscode/raw/master/readme/flow-disable-tsc.gif"/>
 </p>
 
+* If you install Flow via `flow-bin` (recommended), then you'll need to enable the `flow.useNPMPackagedFlow` (default: false) setting. Enabling this globally is a security risk, so we recommend only enabling it via workspace or folder-specific settings.
+* If you install Flow globally (for example, `npm install -g flow-bin`), make sure `flow` is available on your `PATH`. If neither are true, then a version bundled with this extension will be used, but this is discouraged as it may change over time.
+
 ## Configuration
 You can specify a configuration by amending the VS Code `settings.json` file. Access this through Preferences → Settings. You must reload VS Code after installing this extension for these settings to take affect.
-
-* `flow.useNPMPackagedFlow` (default: false) allows using flow from your node_modules for VSCode. **Warning**: Setting to true is a security risk. When you open a project we will immediately run code contained within it. This will need to be turned on in order to use `flow-bin`. We recommend using the "workspace" or "folder" settings rather than the user settings so that this does not apply globally.
-  > **Note:** Plugin will look for node_modules in `flowconfigDir` and root of `workspaceFolder`
 
 * `flow.pathToFlow` (default: 'flow') Absolute path to flow binary.
   ```javascript
