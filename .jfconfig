@@ -1,0 +1,6 @@
+{
+  "project_id": "flow-for-vscode",
+  "capabilities": [
+    "submit",
+  ],
+}
