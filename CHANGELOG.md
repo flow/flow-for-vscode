@@ -1,6 +1,25 @@
 # Changelog
 
-### [1.5.0](https://github.com/flowtype/flow-for-vscode/compare/v1.1.4...v1.5.0) (2019-09-09)
+### [1.9.2](https://github.com/flowtype/flow-for-vscode/compare/v1.9.1...v1.9.2) (2021-09-07)
+
+#### Bug Fixes
+
+* **windows**: fix verification of `flow-bin` binaries ([9885ab6](https://github.com/flowtype/flow-for-vscode/commit/9885ab680b3f4ca8cc10ccb602fc7b6f9c1c125f))
+
+### [1.9.1](https://github.com/flowtype/flow-for-vscode/compare/v1.9.0...v1.9.1) (2021-07-12)
+
+#### Bug Fixes
+
+* restore compatibility with older versions of VS Code ([00a4ff0](https://github.com/flowtype/flow-for-vscode/commit/00a4ff0171b751f8c000541dc352d1b28ba68470))
+
+### [1.9.0](https://github.com/flowtype/flow-for-vscode/compare/v1.5.0...v1.9.0) (2021-06-29)
+
+#### Features
+
+* Verify integrity of `flow-bin` binaries ([af92850](https://github.com/flowtype/flow-for-vscode/commit/af92850998d2f3121ec475e6eaff5af163d9d301))
+* Allow clickable links on hover for type descriptions ([1a43503](https://github.com/flowtype/flow-for-vscode/commit/1a435034b519df8d985da496dfee0cdc89dc377f))
+
+### [1.5.0](https://github.com/flowtype/flow-for-vscode/compare/v1.4.0...v1.5.0) (2019-09-09)
 
 #### Bug Fixes
 
