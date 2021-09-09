@@ -24,7 +24,7 @@
 	"contributes": {
 		"configuration": {
 			"type": "object",
-			"title": "Flow Configurations",
+			"title": "Flow",
 			"properties": {
 				"flow.enabled": {
 					"scope": "resource",
