@@ -85,12 +85,6 @@
 					"default": true,
 					"description": "Complete functions with their parameter signature."
 				},
-				"flow.useLSP": {
-					"scope": "window",
-					"type": "boolean",
-					"default": true,
-					"description": "Turn off to switch from the official Flow Language Server implementation to talking directly to flow."
-				},
 				"flow.logLevel": {
 					"scope": "resource",
 					"type": "string",
@@ -119,38 +113,11 @@
 					"default": "off",
 					"description": "Traces the communication between VSCode and the flow lsp service."
 				},
-				"flow.fileExtensions": {
-					"scope": "resource",
-					"type": "array",
-					"default": [
-						".js",
-						".mjs",
-						".jsx",
-						".flow",
-						".json"
-					],
-					"description": "(Supported only when useLSP: false). File extensions to consider for flow processing",
-					"items": {
-						"type": "string"
-					}
-				},
 				"flow.runOnEdit": {
 					"scope": "resource",
 					"type": "boolean",
 					"default": true,
 					"description": "If true will run flow on every edit, otherwise will run only when changes are saved (Note: 'useLSP: true' only supports syntax errors)"
-				},
-				"flow.runOnAllFiles": {
-					"scope": "resource",
-					"type": "boolean",
-					"default": false,
-					"description": "(Supported only when useLSP: false) Run Flow on all files, No need to put //@flow comment on top of files."
-				},
-				"flow.showStatus": {
-					"scope": "resource",
-					"type": "boolean",
-					"default": true,
-					"description": "(Supported only when useLSP: false) If true will display flow status is the statusbar"
 				}
 			}
 		},
@@ -210,22 +177,12 @@
 	},
 	"dependencies": {
 		"bin-version": "4.0.0",
-		"cross-spawn": "^6.0.5",
-		"dequeue": "^1.0.5",
 		"elegant-spinner": "^1.0.1",
-		"event-kit": "^2.5.3",
 		"flow-bin": "^0.107.0",
 		"fs-plus": "^3.1.1",
-		"fuzzaldrin": "^2.1.0",
-		"lodash.debounce": "^4.0.8",
-		"lru-cache": "^4.0.1",
-		"mkdirp": "^0.5.1",
 		"prettier": "1.18.2",
 		"rimraf": "^3.0.2",
-		"rxjs": "^5.0.0-beta.8",
 		"semver": "^6.3.0",
-		"shell-quote": "^1.6.0",
-		"temp": "^0.9.0",
 		"vscode-languageclient": "^5.2.1",
 		"which": "1.3.1"
 	},
