@@ -5,10 +5,10 @@
 This extension adds [Flow](https://flow.org/) support for VS Code. Flow is a static type checker, designed to find type errors in JavaScript programs. Follow the official guide to [get started](https://flow.org/en/docs/getting-started/).
 
 <p align="center">
-  <img src="https://github.com/flowtype/flow-for-vscode/raw/master/readme/flow-main.gif"/>
+  <img src="https://github.com/flowtype/flow-for-vscode/raw/main/readme/flow-main.gif"/>
 </p>
 
-Want to help make Flow in VS Code really shine? If this is you, you can get [set up for development](https://github.com/flowtype/flow-for-vscode/blob/master/CONTRIBUTING.md) easily.
+Want to help make Flow in VS Code really shine? If this is you, you can get [set up for development](https://github.com/flowtype/flow-for-vscode/blob/main/CONTRIBUTING.md) easily.
 
 ## Installation
 
@@ -20,7 +20,7 @@ Search for "Flow Language Support" in the VS Code extensions panel or install th
 * Set `javascript.validate.enable` option to `false` **or** completely disable the built-in TypeScript extension for your project (see gif below):
 
 <p align="center">
-  <img src="https://github.com/flowtype/flow-for-vscode/raw/master/readme/flow-disable-tsc.gif"/>
+  <img src="https://github.com/flowtype/flow-for-vscode/raw/main/readme/flow-disable-tsc.gif"/>
 </p>
 
 * If you install Flow via `flow-bin` (recommended), then we will by default try to use this installation of flow by looking for it in `node_modules`. This behavior can be disabled by setting the `flow.useNPMPackagedFlow` setting to `false`.
@@ -92,7 +92,7 @@ You can specify a configuration by amending the VS Code `settings.json` file. Ac
 * Toggle-able Code Coverage reports
 
 <p align="center">
-  <img src="https://github.com/flowtype/flow-for-vscode/raw/master/readme/code-coverage.gif"/>
+  <img src="https://github.com/flowtype/flow-for-vscode/raw/main/readme/code-coverage.gif"/>
 </p>
 
 ## Commands
