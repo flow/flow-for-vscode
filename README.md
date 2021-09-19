@@ -122,11 +122,6 @@ To use [Babel](https://babeljs.io):
 * In `.babelrc`, add `"retainLines": true`.
 * In `launch.json`, add `"runtimeArgs": ["-r", "babel-register"]` to the "launch" configuration.
 
-## About
-
-* Lsp mode is built using `flow lsp` (flow official language-server-protocol implementation)
-* Non lsp mode is built on top of [Nuclide](https://github.com/facebook/nuclide)'s Flow support.
-
 ## Contributing
 
 * please refer to [CONTRIBUTING.md](CONTRIBUTING.md)
