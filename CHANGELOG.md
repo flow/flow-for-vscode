@@ -1,5 +1,10 @@
 # Changelog
 
+### [2.0.0](https://github.com/flowtype/flow-for-vscode/compare/v1.9.2...v2.0.0) (2022-02-09)
+
+* Removed support for legacy Flow integration. All communication with Flow now uses the Language Server Protocol.
+* The "Path To Flow" setting is now ignored in Restricted Mode.
+
 ### [1.9.2](https://github.com/flowtype/flow-for-vscode/compare/v1.9.1...v1.9.2) (2021-09-07)
 
 #### Bug Fixes
