@@ -221,7 +221,11 @@
 	},
 	"capabilities": {
 		"untrustedWorkspaces": {
-			"supported": true
+			"supported": "limited",
+			"description": "The Path To Flow setting will not be used in Restricted Mode.",
+			"restrictedConfigurations": [
+				"flow.pathToFlow"
+			]
 		}
 	}
 }
