@@ -112,12 +112,6 @@
 					],
 					"default": "off",
 					"description": "Traces the communication between VSCode and the flow lsp service."
-				},
-				"flow.runOnEdit": {
-					"scope": "resource",
-					"type": "boolean",
-					"default": true,
-					"description": "If true will run flow on every edit, otherwise will run only when changes are saved (Note: 'useLSP: true' only supports syntax errors)"
 				}
 			}
 		},
