@@ -53,38 +53,21 @@ You can specify a configuration by amending the VS Code `settings.json` file. Ac
 
 * `flow.coverageSeverity` (default: 'info'): Type coverage diagnostic severity.
 
-  > **Note:** Only supported when useLSP: true.
-
-* `flow.lazyMode` (default: null): to support flow [lazyMode](https://flow.org/en/docs/lang/lazy-modes/)
-
-  > **Note:** Only supported when useLSP: true.
+* `flow.lazyMode` (default: null): to override the [lazy mode](https://flow.org/en/docs/lang/lazy-modes/). Prefer to set this in `.flowconfig` instead.
 
 * `flow.stopFlowOnExit` (default: true) stop flow server on exit from Project.
 
 * `flow.useCodeSnippetOnFunctionSuggest` (default: true) Complete functions with their parameter signature.
 
-* `flow.showStatus` (default: true) If `true` will display a spinner in the status-bar while flow is type checking.
-
-  > **Note:** Not supported when useLSP: true. In lsp mode you can use status-bar widget to view status.
-
-* `flow.runOnAllFiles` (default: false) Run Flow on all files, No need to put `//@flow comment` on top of files.
-
-  > **Note:** Not supported when useLSP: true. You can use flowconfig option [all](https://flow.org/en/docs/config/options/#toc-all-boolean).
-
-* `flow.useLSP` (default: true) Turn off to switch from the official Flow Language Server implementation to talking directly to flow.
-
-  > **Note**: useLSP: true requires `flow >= 0.75`
-
 * `flow.enabled` (default: true) you can disable flow for some Project for example.
 
 ## Features
 
-* Supports multiple flowconfig and vscode multi-root workspaces (required `useLSP: true`)
+* Supports multiple flowconfig and vscode multi-root workspaces
 * IntelliSense
 * Go to Definition / Peek Definition
 * Diagnostics (Errors, Warnings)
 * Hover type information
-* Rename (required `useLSP: true`)
 * Toggle-able Code Coverage reports
 
 <p align="center">
