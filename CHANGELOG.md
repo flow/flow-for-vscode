@@ -1,5 +1,10 @@
 # Changelog
 
+### [2.2.0](https://github.com/flowtype/flow-for-vscode/compare/2.1.0...2.2.0) (2022-07-26)
+
+* Removed support for the `log.file` flowconfig option, since it contained a security vulnerability.
+* Upgraded bundled version to 0.183.0
+
 ### [2.1.0](https://github.com/flowtype/flow-for-vscode/compare/2.0.0...2.1.0) (2022-03-15)
 
 * Prevent running versions of flow-bin < 0.110.0 in Restricted Mode, since those versions contained a security vulnerability.
