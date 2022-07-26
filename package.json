@@ -8,7 +8,7 @@
 		"multi-root ready"
 	],
 	"engines": {
-		"vscode": "^1.30.0"
+		"vscode": "^1.56.0"
 	},
 	"categories": [
 		"Programming Languages",
