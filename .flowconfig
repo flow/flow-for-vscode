@@ -12,14 +12,5 @@
 [libs]
 flow-libs
 
-[options]
-suppress_comment=.*\\$FlowFixMe.*
-suppress_comment=.*\\$FlowIssue.*
-suppress_comment=\\(.\\|\n\\)*\\$FlowDisableNextLine
-
-suppress_type=$FixMe
-
-experimental.lsp.code_actions=true
-
 [version]
-^0.107.0
+^0.183.0

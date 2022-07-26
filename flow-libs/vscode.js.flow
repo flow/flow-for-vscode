@@ -1310,9 +1310,9 @@ declare module 'vscode' {
     dispose(): void;
   }
 
-  declare export type IDisposable = {
+  declare export interface IDisposable {
     dispose(): any;
-  };
+  }
 
   /**
    * Represents a type which can release resources, such
@@ -3992,7 +3992,7 @@ declare module 'vscode' {
      * An array to which disposables can be added. When this
      * extension is deactivated the disposables will be disposed.
      */
-    subscriptions: { dispose(): any }[];
+    subscriptions: interface { dispose(): any }[];
 
     /**
      * A memento object that stores state in the context
