@@ -16,6 +16,7 @@ module.exports = {
 
   rules: {
     'no-negated-condition': 'off',
+    'no-nested-ternary': 'off',
     'no-undefined': 'off',
 
     /* Rules to prevent use of require in code: with rollup it's not safe to use */
