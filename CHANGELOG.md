@@ -1,5 +1,9 @@
 # Changelog
 
+### [2.2.1](https://github.com/flowtype/flow-for-vscode/compare/2.2.0...2.2.1) (2023-01-06)
+
+* Fix a security vulnerability.
+
 ### [2.2.0](https://github.com/flowtype/flow-for-vscode/compare/2.1.0...2.2.0) (2022-07-26)
 
 * Removed support for the `log.file` flowconfig option, since it contained a security vulnerability.
