@@ -1,4 +1,8 @@
 # Flow for Visual Studio Code
+
+> [!NOTE] 
+> Development of the extension has been moved into the main Flow repo [here](https://github.com/facebook/flow/tree/main/packages/flow-for-vscode). As a result, this repo will be archived. All issues about the extension should be made in https://github.com/facebook/flow/issues.
+
 [![Backers on Open Collective](https://opencollective.com/flow-for-vscode/backers/badge.svg)](#backers)
  [![Sponsors on Open Collective](https://opencollective.com/flow-for-vscode/sponsors/badge.svg)](#sponsors)
 
